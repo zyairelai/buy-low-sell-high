@@ -1,5 +1,5 @@
 # core-compounding-alert
-A telegram bot to make alert for stock/crypto Core Compounding strategy. Need sources from Binance, Coinbase, Cashapp and other famous stocks exchange platform. 
+Inspired by [this strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45), currently working on automation on Binance.
 
 ### Here is my ROI on Nov 2020 with my strategy
 <p align="center">
