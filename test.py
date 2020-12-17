@@ -10,3 +10,9 @@ amount = "0.02"
 
 candles = client.get_klines(symbol=symbol, interval=Client.KLINE_INTERVAL_30MINUTE)
 print(candles)
+
+order = client.create_test_order(
+    symbol      = 'ETHUSDT',
+    side        = 'BUY',
+    type        = 'MARKET',
+    quantity    =  100)
