@@ -1,18 +1,20 @@
-import keys
+import os
 import sys
-from binance.client import Client
-import datetime
 import time
+import json
+from binance.client import Client
 
-client = Client(keys.api_key, keys.api_secret)
-symbol = "ETHUSDT"
-amount = "0.02"
+symbol  = "ETHUSDT"
+core    =  500
 
-candles = client.get_klines(symbol=symbol, interval=Client.KLINE_INTERVAL_30MINUTE)
-print(candles)
+# Get environment variables
+api_key     = os.environ.get('API_KEY')
+api_secret  = os.environ.get('API_SECRET')
+client      = Client(api_key, api_secret)
 
-order = client.create_test_order(
-    symbol      = 'ETHUSDT',
-    side        = 'BUY',
-    type        = 'MARKET',
-    quantity    =  100)
+while True:
+    price_response = client.get_symbol_ticker(symbol=symbol)
+    price = float(list(list(price_response.items())[1])[1]) # Get Price Value
+    print(price_response)
+    print(price)
+    time.sleep(1)
