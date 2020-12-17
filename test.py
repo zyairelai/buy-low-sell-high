@@ -1,8 +1,8 @@
-import datetime
 import keys
 import sys
-import time
 from binance.client import Client
+import datetime
+import time
 
 client = Client(keys.api_key, keys.api_secret)
 symbol = "ETHUSDT"

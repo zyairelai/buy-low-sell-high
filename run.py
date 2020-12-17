@@ -1,10 +1,6 @@
 import keys
 import sys
-import time
 from binance.client import Client
-
-# start = time.time()
-# print(f"{time.time() - start} seconds\n")
 
 client = Client(keys.api_key, keys.api_secret)
 symbol = "ETHUSDT"
