@@ -1,5 +1,5 @@
 # BUY-LOW-SELL-HIGH
-Inspired by [this strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
+Inspired by [this strategy.](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
 Before running the code, you need to have **AT LEAST 500USD** worth of BTC or ETH purchased, in your spot wallet, and **AT LEAST 200 USDT** in your spot wallet as backup.
 
 ### 1. Requirements
