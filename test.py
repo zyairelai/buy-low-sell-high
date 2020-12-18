@@ -2,7 +2,6 @@ import os
 import time
 import datetime
 from binance.client import Client
-import json
 
 symbol  = "ETHUSDT"
 core    =  500

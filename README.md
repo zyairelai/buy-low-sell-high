@@ -1,5 +1,6 @@
 # BUY-LOW-SELL-HIGH
-Inspired by [this strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)
+Inspired by [this strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
+Before running the code, you need to have AT LEAST 500USD worth of BTC or ETH, and AT LEAST 200 USDT in your wallet as backup.
 
 ### 1. Requirements
 You need to have these libraries installed:
@@ -24,6 +25,6 @@ python3 run.py
 ### 4. Screenshot Validation
 Here is my ROI on Nov 2020 with this strategy
 <p align="center">
-  <img src=".ignore/ROI Nov 2020.jpg">
+  <img src="ROI Nov 2020.jpg">
 </p>
 
