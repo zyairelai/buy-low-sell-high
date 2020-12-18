@@ -4,6 +4,8 @@ import time
 import datetime
 import json
 from binance.client import Client
+# buy   = client.order_market_buy(symbol=symbol, quantity=100)
+# sell  = client.order_market_sell(symbol=symbol, quantity=100)
 
 symbol  = "ETHUSDT"
 core    =  500
@@ -20,20 +22,17 @@ while True:
     balance_response = client.get_asset_balance(asset='ETH')
     balance = float(list(list(balance_response.items())[1])[1])
 
-    current_core = balance * price 
-    print("Current Core: " + current_core)
+    current_core = round((balance * price), 4)
+    print("Current Core         : " + str(current_core) + " USDT")
 
-    change_percent = abs(((float(current_core)-core)/core)*100)
-    print("Percentage Changed: " + change_percent)
+    change_percent = round((((float(current_core)-core)/core)*100), 4)
+    print("Percentage Changed   : " + str(change_percent) + " %")
 
-    if (current_core > core) and (change_percent > 3.5):
-        print("SELL")
-        # sell  = client.order_market_sell(symbol=symbol, quantity=100)
-    elif (current_core < core) and (change_percent > 3.5):
-        print("BUY")
-        # buy   = client.order_market_buy(symbol=symbol, quantity=100)
+    if (current_core > core) and (abs(change_percent) > 3.5):
+        print("Action               : SELL\n")
+    elif (current_core < core) and (abs(change_percent) > 3.5):
+        print("Action               : BUY\n")
     else:
-        print("Do Nothing")
+        print("Action               : Do Nothing\n")
 
     time.sleep(5)         # Every x hours * minutes * seconds -> time.sleep(4 * 60 * 60)
-
