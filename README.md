@@ -22,8 +22,13 @@ Let's make the magic happens!
 ```
 python3 run.py
 ```
+## 4. Donate for MORE!!
+If you found this useful to generate your passive income, feel free to donate to me so I can IMPROVE MORE!
+BTC   : 15VowsyMp9A5DWbKbZEVt4A4r7dQQgddtn
+ETH   : 0x7701948f0477e629c5bb5d79f99b833133ab30d5
+USDT  : 0x7701948f0477e629c5bb5d79f99b833133ab30d5
 
-## 4. Screenshot Validation
+## 5. Screenshot Validation
 Here is my ROI on Nov 2020 with this strategy
 <p align="center">
   <img src="screenshot.jpg">
