@@ -1,11 +1,6 @@
 # BUY-LOW-SELL-HIGH
 Inspired by [this strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)
 
-1. [Requirements](#Requirements)
-2. [Environment Setup](#Environment-Setup)
-3. [Run](#Run)
-4. [Screenshot Validation](#Screenshot-Validation)
-
 ### 1. Requirements
 You need to have these libraries installed:
 ```
@@ -29,6 +24,6 @@ python3 run.py
 ### 4. Screenshot Validation
 Here is my ROI on Nov 2020 with this strategy
 <p align="center">
-  <img src="test/ROI Nov 2020.jpg">
+  <img src=".ignore/ROI Nov 2020.jpg">
 </p>
 
