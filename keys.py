@@ -4,8 +4,8 @@ from binance.client import Client
 # Paste the following into your Default Shell
 """
 export API_OWNER="your_binance_username"
-export API_KEY="your_api_key"
-export API_SECRET="your_secret_key"
+export API_KEY="your_binance_api_key"
+export API_SECRET="your_binance_secret_key"
 """
 
 # Get environment variables

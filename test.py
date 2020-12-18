@@ -46,4 +46,4 @@ while True:
         with open("logs.txt", "a") as trade_logs:
             trade_logs.write("Action                : Do Nothing\n\n")
 
-    time.sleep(3)          # Every X (hours * minutes * seconds) -> time.sleep(4 * 60 * 60)
+    time.sleep(3)
