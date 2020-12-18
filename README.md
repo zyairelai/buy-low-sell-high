@@ -25,6 +25,6 @@ python3 run.py
 ### 4. Screenshot Validation
 Here is my ROI on Nov 2020 with this strategy
 <p align="center">
-  <img src="ROI Nov 2020.jpg">
+  <img src="screenshot.jpg">
 </p>
 
