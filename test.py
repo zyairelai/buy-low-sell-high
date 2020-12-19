@@ -27,23 +27,25 @@ while True:
     print("Current Core         : " + str(current_core) + " USDT")
     print("Percentage Changed   : " + str(change_percent) + " %")
 
-    with open("logs.txt", "a") as trade_logs:
-        trade_logs.write(str(price_response) + "\n")
-        trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
-        trade_logs.write("Current Core          : " + str(current_core) + " USDT\n")
-        trade_logs.write("Percentage Changed    : " + str(change_percent) + " %\n")
-
     if (current_core > core) and (abs(change_percent) > 3.5):
         print("Action               : SELL " + str(trade_amount) + "\n")
         with open("logs.txt", "a") as trade_logs:
+            trade_logs.write(str(price_response) + "\n")
+            trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
+            trade_logs.write("Prefix Core           : " + str(core) + " USDT\n")
+            trade_logs.write("Current Core          : " + str(current_core) + " USDT\n")
+            trade_logs.write("Percentage Changed    : " + str(change_percent) + " %\n")
             trade_logs.write("Action                : SELL " + str(trade_amount) + "\n\n")
     elif (current_core < core) and (abs(change_percent) > 3.5):
         print("Action               : BUY " + str(trade_amount) + "\n")
         with open("logs.txt", "a") as trade_logs:
+            trade_logs.write(str(price_response) + "\n")
+            trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
+            trade_logs.write("Prefix Core           : " + str(core) + " USDT\n")
+            trade_logs.write("Current Core          : " + str(current_core) + " USDT\n")
+            trade_logs.write("Percentage Changed    : " + str(change_percent) + " %\n")
             trade_logs.write("Action                : BUY " + str(trade_amount) + "\n\n")
     else:
         print("Action               : Do Nothing\n")
-        with open("logs.txt", "a") as trade_logs:
-            trade_logs.write("Action                : Do Nothing\n\n")
 
     time.sleep(3)
