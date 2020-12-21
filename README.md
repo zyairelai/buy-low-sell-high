@@ -1,12 +1,13 @@
 # BUY-LOW-SELL-HIGH
-Inspired by [this strategy.](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
+Inspired by [The 3% Signal Strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45).  
 Before running the code, you need to have **AT LEAST 500 USDT** worth of BTC/ETH **in your spot wallet**,  
 and **AT LEAST 200 USDT** in your spot wallet as backup troops.
 
 ## 1. Requirements
 You need to have these libraries installed:
 ```
-pip3 install cryptography==3.2 python-binance==0.7.5
+pip3 install cryptography==3.2 
+pip3 install python-binance==0.7.5
 ```
 ## 2. Environment Setup
 Paste the following into your Default Shell
