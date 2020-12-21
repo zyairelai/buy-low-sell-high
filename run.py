@@ -53,4 +53,4 @@ while True:
     else:
         print("Action               : Do Nothing\n")
 
-    time.sleep(30*60)
+    time.sleep(30*60) # Run every 30 minutes
