@@ -23,6 +23,7 @@ while True:
     trade_amount    = round((abs(core - current_core) / price), 4)
 
     print(price_response)
+    print("Created at           : " + str(datetime.datetime.now()))
     print("Prefix Core          : " + str(core) + " USDT")
     print("Current Core         : " + str(current_core) + " USDT")
     print("Percentage Changed   : " + str(change_percent) + " %")
@@ -50,4 +51,4 @@ while True:
     else:
         print("Action               : Do Nothing\n")
 
-    time.sleep(4*60*60)
+    time.sleep(3*60*60)
