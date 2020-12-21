@@ -32,22 +32,22 @@ while True:
 
     if (current_core > core) and (abs(change_percent) > 3.5):
         print("Action               : SELL " + str(trade_amount) + " " + asset + "\n")
-        with open("logs.txt", "a") as trade_logs:
-            trade_logs.write(str(price_response) + "\n")
-            trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
-            trade_logs.write("Prefix Core  (" + asset + ")    : " + str(core) + " " + base + " \n")
-            trade_logs.write("Current Core (" + asset + ")    : " + str(current_core) + " " + base + " \n")
-            trade_logs.write("Percentage Changed    : " + str(change_percent) + " " + base + " \n")
-            trade_logs.write("Action                : SELL " + str(trade_amount) + " " + asset + "\n\n")
+        # with open("logs.txt", "a") as trade_logs:
+        #     trade_logs.write(str(price_response) + "\n")
+        #     trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
+        #     trade_logs.write("Prefix Core  (" + asset + ")    : " + str(core) + " " + base + " \n")
+        #     trade_logs.write("Current Core (" + asset + ")    : " + str(current_core) + " " + base + " \n")
+        #     trade_logs.write("Percentage Changed    : " + str(change_percent) + " " + base + " \n")
+        #     trade_logs.write("Action                : SELL " + str(trade_amount) + " " + asset + "\n\n")
     elif (current_core < core) and (abs(change_percent) > 3.5):
         print("Action               : BUY " + str(trade_amount) + " " + asset + "\n")
-        with open("logs.txt", "a") as trade_logs:
-            trade_logs.write(str(price_response) + "\n")
-            trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
-            trade_logs.write("Prefix Core  (" + asset + ")    : " + str(core) + " " + base + " \n")
-            trade_logs.write("Current Core (" + asset + ")    : " + str(current_core) + " " + base + " \n")
-            trade_logs.write("Percentage Changed    : " + str(change_percent) + " %\n")
-            trade_logs.write("Action                : BUY " + str(trade_amount) + " " + asset + "\n\n")
+        # with open("logs.txt", "a") as trade_logs:
+        #     trade_logs.write(str(price_response) + "\n")
+        #     trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
+        #     trade_logs.write("Prefix Core  (" + asset + ")    : " + str(core) + " " + base + " \n")
+        #     trade_logs.write("Current Core (" + asset + ")    : " + str(current_core) + " " + base + " \n")
+        #     trade_logs.write("Percentage Changed    : " + str(change_percent) + " %\n")
+        #     trade_logs.write("Action                : BUY " + str(trade_amount) + " " + asset + "\n\n")
     else:
         print("Action               : Do Nothing\n")
 
