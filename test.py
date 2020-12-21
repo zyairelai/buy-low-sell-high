@@ -3,7 +3,7 @@ import time
 import datetime
 from binance.client import Client
 
-asset   = "BTC"
+asset   = "ETH"
 base    = "USDT"
 symbol  =  asset + base
 core    =  500
