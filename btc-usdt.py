@@ -1,23 +1,23 @@
 import os
-import time
 import datetime
 from binance.client import Client
+from apscheduler.schedulers.blocking import BlockingScheduler
 
-asset   = "BTC"
-base    = "USDT"
-symbol  =  asset + base
-core    =  1000
+def buy_low_sell_high():
+    asset   = "BTC"
+    base    = "USDT"
+    symbol  =  asset + base
+    core    =  1000
 
-# Get environment variables
-api_key     = os.environ.get('API_KEY')
-api_secret  = os.environ.get('API_SECRET')
-client      = Client(api_key, api_secret)
+    # Get environment variables
+    api_key     = os.environ.get('API_KEY')
+    api_secret  = os.environ.get('API_SECRET')
+    client      = Client(api_key, api_secret)
 
-transactions_history = "transactions-history"
-if not os.path.exists(transactions_history):
-    os.makedirs(transactions_history)
+    transactions_history = "transactions-history"
+    if not os.path.exists(transactions_history):
+        os.makedirs(transactions_history)
 
-while True:
     price_response = client.get_symbol_ticker(symbol=symbol)
     price = float(list(list(price_response.items())[1])[1])
 
@@ -35,7 +35,7 @@ while True:
     print("Percentage Changed   : " + str(change_percent) + " %")
 
     if (current_core > core) and (abs(change_percent) >= 3.5):
-        sell  = client.order_market_sell(symbol=symbol, quantity=trade_amount)
+        client.order_market_sell(symbol=symbol, quantity=trade_amount)
         print("Action               : SELL " + str(trade_amount) + " " + asset + "\n")
         with open(os.path.join(transactions_history, asset + "-logs.txt"), "a") as trade_logs:
             trade_logs.write(str(price_response) + "\n")
@@ -45,7 +45,7 @@ while True:
             trade_logs.write("Percentage Changed    : " + str(change_percent) + " " + base + " \n")
             trade_logs.write("Action                : SELL " + str(trade_amount) + " " + asset + "\n\n")
     elif (current_core < core) and (abs(change_percent) >= 3.5):
-        buy   = client.order_market_buy(symbol=symbol, quantity=trade_amount)
+        client.order_market_buy(symbol=symbol, quantity=trade_amount)
         print("Action               : BUY " + str(trade_amount) + " ETH\n")
         with open(os.path.join(transactions_history, asset + "-logs.txt"), "a") as trade_logs:
             trade_logs.write(str(price_response) + "\n")
@@ -56,5 +56,8 @@ while True:
             trade_logs.write("Action                : BUY " + str(trade_amount) + " " + asset + "\n\n")
     else:
         print("Action               : Do Nothing\n")
-
-    time.sleep(30*60) # Run every 30 minutes
+    
+# Run every 30 minutes 
+scheduler = BlockingScheduler()
+scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
+scheduler.start()
