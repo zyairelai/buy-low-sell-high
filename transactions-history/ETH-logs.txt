@@ -1,0 +1,42 @@
+{'symbol': 'ETHUSDT', 'price': '608.23000000'}
+Created at            : 2020-12-21 11:01:02.537539
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 472.4791 USDT 
+Percentage Changed    : -5.5042 %
+Action                : BUY 0.0452 ETH
+
+{'symbol': 'ETHUSDT', 'price': '632.00000000'}
+Created at            : 2020-12-22 16:05:26.210037
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 519.5103 USDT 
+Percentage Changed    : 3.9021 USDT 
+Action                : SELL 0.0309 ETH
+
+{'symbol': 'ETHUSDT', 'price': '609.74000000'}
+Created at            : 2020-12-23 10:05:45.157180
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 482.3714 USDT 
+Percentage Changed    : -3.5257 %
+Action                : BUY 0.0289 ETH
+
+{'symbol': 'ETHUSDT', 'price': '572.64000000'}
+Created at            : 2020-12-23 22:32:59.909759
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 469.5705 USDT 
+Percentage Changed    : -6.0859 %
+Action                : BUY 0.0531 ETH
+
+{'symbol': 'ETHUSDT', 'price': '597.95000000'}
+Created at            : 2020-12-24 14:00:05.724846
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 522.0761 USDT 
+Percentage Changed    : 4.4152 USDT 
+Action                : SELL 0.0369 ETH
+
+{'symbol': 'ETHUSDT', 'price': '620.43000000'}
+Created at            : 2020-12-25 08:30:28.013464
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 518.8098 USDT 
+Percentage Changed    : 3.762 USDT 
+Action                : SELL 0.0303 ETH
+
