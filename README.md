@@ -6,6 +6,7 @@ and **AT LEAST 200 USDT** in your spot wallet as backup troops.
 ## 1. Requirements
 You need to have these libraries installed:
 ```
+pip3 install apscheduler==3.6.3
 pip3 install cryptography==3.2 
 pip3 install python-binance==0.7.5
 ```
