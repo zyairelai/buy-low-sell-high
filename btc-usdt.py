@@ -6,7 +6,7 @@ from binance.client import Client
 asset   = "BTC"
 base    = "USDT"
 symbol  =  asset + base
-core    =  500
+core    =  1000
 
 # Get environment variables
 api_key     = os.environ.get('API_KEY')
