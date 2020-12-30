@@ -14,10 +14,6 @@ def buy_low_sell_high():
     api_secret  = os.environ.get('API_SECRET')
     client      = Client(api_key, api_secret)
 
-    transactions_history = "transactions-history"
-    if not os.path.exists(transactions_history):
-        os.makedirs(transactions_history)
-
     price_response = client.get_symbol_ticker(symbol=symbol)
     price = float(list(list(price_response.items())[1])[1])
 

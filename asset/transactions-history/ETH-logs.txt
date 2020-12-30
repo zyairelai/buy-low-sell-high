@@ -40,3 +40,59 @@ Current Core (ETH)    : 518.8098 USDT
 Percentage Changed    : 3.762 USDT 
 Action                : SELL 0.0303 ETH
 
+{'symbol': 'ETHUSDT', 'price': '643.48000000'}
+Created at            : 2020-12-26 16:30:01.254908
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 518.587 USDT 
+Percentage Changed    : 3.7174 USDT 
+Action                : SELL 0.0289 ETH
+
+{'symbol': 'ETHUSDT', 'price': '673.01000000'}
+Created at            : 2020-12-27 14:30:00.702036
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 522.9355 USDT 
+Percentage Changed    : 4.5871 USDT 
+Action                : SELL 0.0341 ETH
+
+{'symbol': 'ETHUSDT', 'price': '697.79000000'}
+Created at            : 2020-12-27 16:00:00.692005
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 518.3952 USDT 
+Percentage Changed    : 3.679 USDT 
+Action                : SELL 0.0264 ETH
+
+{'symbol': 'ETHUSDT', 'price': '673.17000000'}
+Created at            : 2020-12-27 21:00:00.706121
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 482.333 USDT 
+Percentage Changed    : -3.5334 %
+Action                : BUY 0.0262 ETH
+
+{'symbol': 'ETHUSDT', 'price': '712.91000000'}
+Created at            : 2020-12-28 00:30:00.703724
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 529.4854 USDT 
+Percentage Changed    : 5.8971 USDT 
+Action                : SELL 0.0414 ETH
+
+{'symbol': 'ETHUSDT', 'price': '740.00000000'}
+Created at            : 2020-12-28 09:00:00.964346
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 518.9694 USDT 
+Percentage Changed    : 3.7939 USDT 
+Action                : SELL 0.0256 ETH
+
+{'symbol': 'ETHUSDT', 'price': '711.72000000'}
+Created at            : 2020-12-29 03:30:00.698691
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 480.9163 USDT 
+Percentage Changed    : -3.8167 %
+Action                : BUY 0.0268 ETH
+
+{'symbol': 'ETHUSDT', 'price': '741.66000000'}
+Created at            : 2020-12-30 00:30:00.697473
+Prefix Core  (ETH)    : 500 USDT 
+Current Core (ETH)    : 521.0236 USDT 
+Percentage Changed    : 4.2047 USDT 
+Action                : SELL 0.0283 ETH
+
