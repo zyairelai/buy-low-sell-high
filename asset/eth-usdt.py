@@ -7,7 +7,7 @@ def buy_low_sell_high():
     asset   = "ETH"
     base    = "USDT"
     symbol  =  asset + base
-    core    =  500
+    core    =  300
 
     # Get environment variables
     api_key     = os.environ.get('API_KEY')
@@ -38,8 +38,8 @@ def buy_low_sell_high():
         print("Action               : BUY " + str(trade_amount) + " ETH\n")
     else:
         print("Action               : Do Nothing\n")
-    
-# Run every 30 minutes 
+
+# Run every 30 minutes
 scheduler = BlockingScheduler()
 scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
 scheduler.start()

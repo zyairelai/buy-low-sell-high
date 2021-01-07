@@ -56,8 +56,8 @@ def buy_low_sell_high():
             trade_logs.write("Action                : BUY " + str(trade_amount) + " " + asset + "\n\n")
     else:
         print("Action               : Do Nothing\n")
-    
-# Run every 30 minutes 
+
+# Run every 30 minutes
 scheduler = BlockingScheduler()
 scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
 scheduler.start()

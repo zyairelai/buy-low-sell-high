@@ -23,7 +23,7 @@ def buy_low_sell_high():
     current_core    = round((balance * price), 4)
     change_percent  = round((((float(current_core)-core)/core)*100), 4)
     trade_amount    = round((abs(core - current_core) / price), 4)
-    
+
     print(price_response)
     print("Created at           : " + str(datetime.datetime.now()))
     print("Prefix Core  (" + asset + ")   : " + str(core) + " " + base)
