@@ -1,4 +1,4 @@
-import os
+import keys
 import datetime
 from binance.client import Client
 from apscheduler.schedulers.blocking import BlockingScheduler
@@ -10,13 +10,9 @@ def buy_low_sell_high():
     core    =  500
 
     # Get environment variables
-    api_key     = os.environ.get('API_KEY')
-    api_secret  = os.environ.get('API_SECRET')
+    api_key     = api.get_key()
+    api_secret  = api.get_secret()
     client      = Client(api_key, api_secret)
-
-    transactions_history = "transactions-history"
-    if not os.path.exists(transactions_history):
-        os.makedirs(transactions_history)
 
     price_response = client.get_symbol_ticker(symbol=symbol)
     price = float(list(list(price_response.items())[1])[1])
@@ -37,23 +33,9 @@ def buy_low_sell_high():
     if (current_core > core) and (abs(change_percent) >= 3.5):
         client.order_market_sell(symbol=symbol, quantity=trade_amount)
         print("Action               : SELL " + str(trade_amount) + " " + asset + "\n")
-        with open(os.path.join(transactions_history, asset + "-logs.txt"), "a") as trade_logs:
-            trade_logs.write(str(price_response) + "\n")
-            trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
-            trade_logs.write("Prefix Core  (" + asset + ")    : " + str(core) + " " + base + " \n")
-            trade_logs.write("Current Core (" + asset + ")    : " + str(current_core) + " " + base + " \n")
-            trade_logs.write("Percentage Changed    : " + str(change_percent) + " " + base + " \n")
-            trade_logs.write("Action                : SELL " + str(trade_amount) + " " + asset + "\n\n")
     elif (current_core < core) and (abs(change_percent) >= 3.5):
         client.order_market_buy(symbol=symbol, quantity=trade_amount)
         print("Action               : BUY " + str(trade_amount) + " ETH\n")
-        with open(os.path.join(transactions_history, asset + "-logs.txt"), "a") as trade_logs:
-            trade_logs.write(str(price_response) + "\n")
-            trade_logs.write("Created at            : " + str(datetime.datetime.now()) + "\n")
-            trade_logs.write("Prefix Core  (" + asset + ")    : " + str(core) + " " + base + " \n")
-            trade_logs.write("Current Core (" + asset + ")    : " + str(current_core) + " " + base + " \n")
-            trade_logs.write("Percentage Changed    : " + str(change_percent) + " %\n")
-            trade_logs.write("Action                : BUY " + str(trade_amount) + " " + asset + "\n\n")
     else:
         print("Action               : Do Nothing\n")
 

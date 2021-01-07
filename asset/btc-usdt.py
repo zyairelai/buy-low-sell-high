@@ -1,4 +1,4 @@
-import os
+import keys
 import datetime
 from binance.client import Client
 from apscheduler.schedulers.blocking import BlockingScheduler
@@ -10,8 +10,8 @@ def buy_low_sell_high():
     core    =  300
 
     # Get environment variables
-    api_key     = os.environ.get('API_KEY')
-    api_secret  = os.environ.get('API_SECRET')
+    api_key     = api.get_key()
+    api_secret  = api.get_secret()
     client      = Client(api_key, api_secret)
 
     price_response = client.get_symbol_ticker(symbol=symbol)
