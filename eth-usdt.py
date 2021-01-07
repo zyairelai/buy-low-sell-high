@@ -1,4 +1,4 @@
-import keys
+import keys as api
 import datetime
 from binance.client import Client
 from apscheduler.schedulers.blocking import BlockingScheduler
