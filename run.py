@@ -1,8 +1,12 @@
 import os
 import config
-import datetime
+import socket
+import requests
+import urllib3
+from datetime import datetime
 from binance.client import Client
 from apscheduler.schedulers.blocking import BlockingScheduler
+from binance.exceptions import BinanceAPIException
 
 # Get environment variables
 api_key     = os.environ.get('API_KEY')
@@ -21,7 +25,7 @@ def buy_low_sell_high():
     trade_amount    = round((abs(config.core - current_core) / price), 4)
 
     print(price_response)
-    print("Created at           : " + str(datetime.datetime.now()))
+    print("Created at           : " + str(datetime.now()))
     print("Prefix Core  (" + config.asset + ")   : " + str(config.core) + " " + config.base)
     print("Current Core (" + config.asset + ")   : " + str(current_core) + " " + config.base)
     print("Percentage Changed   : " + str(change_percent) + " %")
@@ -36,7 +40,21 @@ def buy_low_sell_high():
 
     else: print("Action               : Do Nothing\n")
 
-# Run every 30 minutes
-scheduler = BlockingScheduler()
-scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
-scheduler.start()
+try:
+    # Run every 30 minutes
+    scheduler = BlockingScheduler()
+    scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
+    scheduler.start()
+
+except (BinanceAPIException, 
+        ConnectionResetError, 
+        socket.timeout,
+        urllib3.exceptions.ProtocolError, 
+        urllib3.exceptions.ReadTimeoutError,
+        requests.exceptions.ConnectionError,
+        requests.exceptions.ReadTimeout) as e:
+
+    if not os.path.exists("Error_Message"): os.makedirs("Error_Message")
+    with open((os.path.join("Error_Message", config.pair + ".txt")), "a") as error_message:
+        error_message.write("[!] " + config.pair + " - " + "Created at : " + datetime.today().strftime("%d-%m-%Y @ %H:%M:%S") + "\n")
+        error_message.write(str(e) + "\n\n")
