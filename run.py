@@ -46,10 +46,10 @@ try:
     scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
     scheduler.start()
 
-except (BinanceAPIException, 
-        ConnectionResetError, 
+except (BinanceAPIException,
+        ConnectionResetError,
         socket.timeout,
-        urllib3.exceptions.ProtocolError, 
+        urllib3.exceptions.ProtocolError,
         urllib3.exceptions.ReadTimeoutError,
         requests.exceptions.ConnectionError,
         requests.exceptions.ReadTimeout) as e:

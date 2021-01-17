@@ -30,9 +30,9 @@ def buy_low_sell_high():
     print("Current Core (" + config.asset + ")   : " + str(current_core) + " " + config.base)
     print("Percentage Changed   : " + str(change_percent) + " %")
 
-    if (current_core > config.core) and (abs(change_percent) > 3.5):   
+    if (current_core > config.core) and (abs(change_percent) > 3.5):
         print("Action               : SELL " + str(trade_amount) + " " + config.asset + "\n")
-    elif (current_core < config.core) and (abs(change_percent) > 3.5): 
+    elif (current_core < config.core) and (abs(change_percent) > 3.5):
         print("Action               : BUY " + str(trade_amount) + " " + config.asset + "\n")
     else: print("Action               : Do Nothing\n")
 
@@ -41,10 +41,10 @@ try:
     scheduler.add_job(buy_low_sell_high, 'cron', second='0,5,10,15,20,25,30,35,40,45,50,55')
     scheduler.start()
 
-except (BinanceAPIException, 
-        ConnectionResetError, 
+except (BinanceAPIException,
+        ConnectionResetError,
         socket.timeout,
-        urllib3.exceptions.ProtocolError, 
+        urllib3.exceptions.ProtocolError,
         urllib3.exceptions.ReadTimeoutError,
         requests.exceptions.ConnectionError,
         requests.exceptions.ReadTimeout) as e:
