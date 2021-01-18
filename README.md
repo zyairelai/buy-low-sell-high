@@ -1,7 +1,6 @@
 # BUY-LOW-SELL-HIGH
 Inspired by [The 3% Signal Strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45).  
-Before running the code, you need to have **AT LEAST 500 USDT** worth of BTC/ETH **in your spot wallet**,  
-and **AT LEAST 200 USDT** in your spot wallet as backup troops.
+Before running the code, you need to have **AT LEAST 500 USD** worth of BTC or USDT **in your spot wallet**.
 
 ## 1. Requirements
 You need to have these libraries installed:
