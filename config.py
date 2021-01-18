@@ -1,7 +1,7 @@
 while True:
     print("Which currency do you want to stack up?")
-    print("1. USDT 🔥")
-    print("2. BTC")
+    print("1. USD 💵")
+    print("2. BTC 💰")
 
     based_input = input("Choose your currency (Default 1) : ") or '1'
     print()
@@ -60,8 +60,8 @@ while True:
         round_off = 6
         while True:
             print("Here are the supported Pairs: ")
-            print("1. LINK-BTC")
-            print("2. SUSHI-BTC")
+            print("1. LINK-BTC 🔥")
+            print("2. SUSHI-BTC 🔥")
             print("3. 1INCH-BTC")
             print("4. UNI-BTC")
             print("5. TRX-BTC")
