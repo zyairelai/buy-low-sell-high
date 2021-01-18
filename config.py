@@ -17,9 +17,14 @@ while True:
             print("4. 1INCH-BTC 🦄")
             print("5. TRX-BTC")
             print("6. XRP-BTC")
+            print("0. Others (Required more input)")
 
-            asset_input = input("Choose your Pair (Default SUSHI) : ") or 'SUSHI'
-            if (asset_input == '1') or (asset_input == 'doge') or (asset_input == 'BDOGENB'):
+            asset_input = input("Choose your Pair (Default LINK) : ") or 'LINK'
+
+            if asset_input == '0':
+                asset = input("Enter your COIN NAME: ").upper()
+                break
+            elif (asset_input == '1') or (asset_input == 'doge') or (asset_input == 'DOGE'):
                 asset = "DOGE"
                 break
             elif (asset_input == '2') or (asset_input == 'link') or (asset_input == 'LINK'):
@@ -57,9 +62,14 @@ while True:
             print("7. UNI-USDT")
             print("8. TRX-USDT")
             print("9. XRP-USDT")
+            print("0. Others (Required more input)")
 
             asset_input = input("Choose your Pair (Default = ETH) : ") or 'ETH'
-            if (asset_input == '1') or (asset_input == 'btc') or (asset_input == 'BTC'):
+            
+            if asset_input == '0':
+                asset = input("Enter your COIN NAME: ").upper()
+                break
+            elif (asset_input == '1') or (asset_input == 'btc') or (asset_input == 'BTC'):
                 asset = "BTC"
                 break
             elif (asset_input == '2') or (asset_input == 'eth') or (asset_input == 'ETH'):
@@ -95,13 +105,13 @@ while True:
     else: print("❗Invalid Number❗Try again❗\n")
 
 core = float(core_input)
-real_trade_input = input("Trade For Real? [Y/n] ") or 'n'
+real_trade_input = input("Enable Live Trade? [Y/n] ") or 'n'
 if real_trade_input == 'Y': 
     live_trade = True
-    print("✅ " + str(live_trade))
+    print("✅ Live Trade Enabled ✅")
 else: 
     live_trade = False
-    print("❌ " + str(live_trade))
+    print("❌ This is a Demo ❌")
 
 print("Pair :   " + asset + "-" + base)
 print("Core :   " + str(core) + "\n")
