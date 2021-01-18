@@ -11,25 +11,25 @@ while True:
         round_off = 6
         while True:
             print("Here are the supported Pairs: ")
-            print("1. LINK-BTC 🔥")
-            print("2. SUSHI-BTC 🔥")
-            print("3. 1INCH-BTC")
-            print("4. UNI-BTC")
+            print("1. BNB-BTC")
+            print("2. LINK-BTC 🔥")
+            print("3. SUSHI-BTC 🔥")
+            print("4. 1INCH-BTC")
             print("5. TRX-BTC")
             print("6. XRP-BTC")
 
-            asset_input = input("Choose your Pair (Default SUSHI) : ") or '2'
-            if (asset_input == '1') or (asset_input == 'link') or (asset_input == 'LINK'):
+            asset_input = input("Choose your Pair (Default SUSHI) : ") or 'SUSHI'
+            if (asset_input == '1') or (asset_input == 'bnb') or (asset_input == 'BNB'):
+                asset = "BNB"
+                break
+            elif (asset_input == '2') or (asset_input == 'link') or (asset_input == 'LINK'):
                 asset = "LINK"
                 break
-            elif (asset_input == '2') or (asset_input == 'sushi') or (asset_input == 'SUSHI'):
+            elif (asset_input == '3') or (asset_input == 'sushi') or (asset_input == 'SUSHI'):
                 asset = "SUSHI"
                 break
-            elif (asset_input == '3') or (asset_input == '1inch') or (asset_input == '1INCH'):
+            elif (asset_input == '4') or (asset_input == '1inch') or (asset_input == '1INCH'):
                 asset = "1INCH"
-                break
-            elif (asset_input == '4') or (asset_input == 'uni') or (asset_input == 'UNI'):
-                asset = "UNI"
                 break
             elif (asset_input == '5') or (asset_input == 'trx') or (asset_input == 'TRX'):
                 asset = "TRX"
@@ -40,7 +40,7 @@ while True:
             else: print("❗Invalid Number❗Try again❗\n")
 
         pair = asset + base
-        core_input = input("\nSet your Core Number for " + asset + "-" + base + " (Default 0.005) : ") or 0.005
+        core_input = input("\nSet your Core Number for " + asset + "-" + base + " (Default 0.003) : ") or 0.003
         break
 
     elif (based_input == '2') or (based_input == 'usdt') or (based_input == 'USDT') or (based_input == 'usd') or (based_input == 'USD'):
@@ -54,9 +54,8 @@ while True:
             print("4. LINK-USDT")
             print("5. SUSHI-USDT")
             print("6. 1INCH-USDT")
-            print("7. UNI-USDT")
-            print("8. TRX-USDT")
-            print("9. XRP-USDT")
+            print("7. TRX-USDT")
+            print("8. XRP-USDT")
 
             asset_input = input("Choose your Pair (Default = ETH) : ") or 'ETH'
             if (asset_input == '1') or (asset_input == 'btc') or (asset_input == 'BTC'):
@@ -77,13 +76,10 @@ while True:
             elif (asset_input == '6') or (asset_input == '1inch') or (asset_input == '1INCH'):
                 asset = "1INCH"
                 break
-            elif (asset_input == '7') or (asset_input == 'uni') or (asset_input == 'UNI'):
-                asset = "UNI"
-                break
-            elif (asset_input == '8') or (asset_input == 'trx') or (asset_input == 'TRX'):
+            elif (asset_input == '7') or (asset_input == 'trx') or (asset_input == 'TRX'):
                 asset = "TRX"
                 break
-            elif (asset_input == '9') or (asset_input == 'xrp') or (asset_input == 'XRP'):
+            elif (asset_input == '8') or (asset_input == 'xrp') or (asset_input == 'XRP'):
                 asset = "XRP"
                 break
             else: print("❗Invalid Number❗Try again❗\n")
