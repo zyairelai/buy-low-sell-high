@@ -36,9 +36,7 @@ Here is my ROI with this strategy
 
 <p align="center">
   <img src="screenshots/November 2020.jpg" width="270" height="480">
-  <em>November 2020</em>
   <img src="screenshots/January 2021.jpg" width="270" height="480">
-  <em>January 2021</em>
   <img src="screenshots/Not Gonna Lose.jpg" width="270" height="480">
-  <em>Not Gonna Lose</em>
 </p>
+
