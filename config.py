@@ -8,6 +8,7 @@ while True:
 
     if based_input == '1':
         base = "USDT"
+        round_off = 4
         while True:
             print("Here are the supported Pairs: ")
             print("1. BTC-USDT 🔥")
@@ -56,6 +57,7 @@ while True:
 
     elif based_input == '2':
         base = "BTC"
+        round_off = 6
         while True:
             print("Here are the supported Pairs: ")
             print("1. LINK-BTC")
@@ -87,7 +89,7 @@ while True:
             else: print("[!] Invalid Number. Try again.\n")
 
         pair = asset + base
-        core_input = input("\nSet your Core Number for " + asset + "-" + base + " (Default 0.01) : ") or 0.01
+        core_input = input("\nSet your Core Number for " + asset + "-" + base + " (Default 0.005) : ") or 0.005
         break
 
     # ADD ON GOES HERE
@@ -95,9 +97,12 @@ while True:
 
 core = float(core_input)
 real_trade_input = input("Trade For Real? [Y/n] ") or 'n'
-if real_trade_input == 'Y': live_trade = True
-else: live_trade = False
+if real_trade_input == 'Y': 
+    live_trade = True
+    print("✅ " + str(live_trade))
+else: 
+    live_trade = False
+    print("❌ " + str(live_trade))
 
-print(" > " + str(live_trade))
 print("Pair :   " + asset + "-" + base)
 print("Core :   " + str(core) + "\n")
