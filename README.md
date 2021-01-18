@@ -35,7 +35,7 @@ USDT (ERC20) : 0x7701948f0477e629c5bb5d79f99b833133ab30d5
 Here is my ROI on Nov 2020 with this strategy
 
 <p align="center">
-  <img src="screenshots/November 2020.jpg"> 
+  <img src=""> 
   <img src="screenshots/January 2021.jpg"> 
   <img src="screenshots/Not Gonna Lose.jpg"> 
 </p>
