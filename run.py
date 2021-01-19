@@ -28,11 +28,11 @@ def buy_low_sell_high():
     print("Current Core         : " + str(current_core) + " " + config.base)
     print("Percentage Changed   : " + str(change_percent) + " %")
 
-    if (current_core > config.core) and (abs(change_percent) > 3.5):
+    if (current_core > config.core) and (abs(change_percent) > config.margin_percentage):
         if config.live_trade: client.order_market_sell(symbol=config.pair, quoteOrderQty=trade_amount)
         print("Action               : SELL " + str(trade_amount) + " " + config.base + "\n")
     
-    elif (current_core < config.core) and (abs(change_percent) > 3.5):
+    elif (current_core < config.core) and (abs(change_percent) > config.margin_percentage):
         if config.live_trade: client.order_market_buy(symbol=config.pair, quoteOrderQty=trade_amount)
         print("Action               : BUY " + str(trade_amount) + " " + config.base + "\n")
     
