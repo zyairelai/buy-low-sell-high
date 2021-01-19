@@ -20,7 +20,9 @@ def buy_low_sell_high():
 
     current_core    = round(asset_balance * asset_price, config.round_off)
     change_percent  = round(((current_core - config.core) / config.core * 100), 4)
-    trade_amount    = round(current_core - config.core, config.round_off)
+    trade_amount    = round(abs(current_core - config.core), config.round_off)
+
+    print(trade_amount)
 
     print(asset_info)
     print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
@@ -29,11 +31,11 @@ def buy_low_sell_high():
     print("Percentage Changed   : " + str(change_percent) + " %")
 
     if (current_core > config.core) and (abs(change_percent) > 3.5):
-        # if config.live_trade: client.order_market_sell(symbol=config.pair, quoteOrderQty=trade_amount)
+        if config.live_trade: client.order_market_sell(symbol=config.pair, quoteOrderQty=trade_amount)
         print("Action               : SELL " + str(trade_amount) + " " + config.base + "\n")
     
     elif (current_core < config.core) and (abs(change_percent) > 3.5):
-        # if config.live_trade: client.order_market_buy(symbol=config.pair, quoteOrderQty=trade_amount)
+        if config.live_trade: client.order_market_buy(symbol=config.pair, quoteOrderQty=trade_amount)
         print("Action               : BUY " + str(trade_amount) + " " + config.base + "\n")
     
     else: print("Action               : Do Nothing\n")

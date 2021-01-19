@@ -20,7 +20,7 @@ def buy_low_sell_high():
 
     current_core    = round(asset_balance * asset_price, config.round_off)
     change_percent  = round(((current_core - config.core) / config.core * 100), 4)
-    trade_amount    = round(current_core - config.core, config.round_off)
+    trade_amount    = round(abs(current_core - config.core), config.round_off)
 
     print(asset_info)
     print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
