@@ -1,14 +1,18 @@
+recommended_margin = 3.5
+
 while True:
     print("Which currency do you want to stack up?")
     print("1. BTC 💰")
     print("2. USD 💵")
 
-    based_input = input("Choose your currency (Default = BTC) : ") or 'BTC'
+    based_input = input("Choose your currency (Default = BTC) : ").upper() or 'BTC'
     print()
 
-    if (based_input == '1') or (based_input == 'btc') or (based_input == 'BTC') or (based_input == 'bitcoin') or (based_input == 'bit'):
+    if (based_input == '1') or (based_input == 'BTC') or (based_input == 'BITCOIN'):
         base = "BTC"
         round_off = 6
+        recommended_core = 0.003
+
         while True:
             print("Here are the supported Pairs: ")
             print("1. DOGE-BTC 🚀")
@@ -19,38 +23,43 @@ while True:
             print("6. XRP-BTC")
             print("0. Others (Required more input)")
 
-            asset_input = input("Choose your Pair (Default LINK) : ") or 'LINK'
+            asset_input = input("Choose your Pair (Default = LINK) : ") or 'LINK'
 
             if asset_input == '0':
                 asset = input("Enter your COIN NAME: ").upper()
+                recommended_core = 0.005
                 break
-            elif (asset_input == '1') or (asset_input == 'doge') or (asset_input == 'DOGE'):
+            elif (asset_input == '1') or (asset_input == 'DOGE'):
                 asset = "DOGE"
+                recommended_margin = 6
+                recommended_core   = 0.002
                 break
-            elif (asset_input == '2') or (asset_input == 'link') or (asset_input == 'LINK'):
+            elif (asset_input == '2') or (asset_input == 'LINK'):
                 asset = "LINK"
                 break
-            elif (asset_input == '3') or (asset_input == 'sushi') or (asset_input == 'SUSHI'):
+            elif (asset_input == '3') or (asset_input == 'SUSHI'):
                 asset = "SUSHI"
                 break
-            elif (asset_input == '4') or (asset_input == '1inch') or (asset_input == '1INCH'):
+            elif (asset_input == '4') or (asset_input == '1INCH'):
                 asset = "1INCH"
                 break
-            elif (asset_input == '5') or (asset_input == 'trx') or (asset_input == 'TRX'):
+            elif (asset_input == '5') or (asset_input == 'TRX'):
                 asset = "TRX"
                 break
-            elif (asset_input == '6') or (asset_input == 'xrp') or (asset_input == 'XRP'):
+            elif (asset_input == '6') or (asset_input == 'XRP'):
                 asset = "XRP"
                 break
             else: print("❗Invalid Number❗Try again❗\n")
 
         pair = asset + base
-        core_input = input("\nSet your Core Number for " + asset + "-" + base + " (Default 0.003) : ") or 0.003
+        core_input = input("\nSet your Core for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ").upper() or recommended_core
         break
 
-    elif (based_input == '2') or (based_input == 'usdt') or (based_input == 'USDT') or (based_input == 'usd') or (based_input == 'USD'):
+    elif (based_input == '2') or (based_input == 'USDT') or (based_input == 'USD'):
         base = "USDT"
         round_off = 4
+        recommended_core = 300
+
         while True:
             print("Here are the supported Pairs: ")
             print("1. BTC-USDT")
@@ -64,47 +73,47 @@ while True:
             print("9. XRP-USDT")
             print("0. Others (Required more input)")
 
-            asset_input = input("Choose your Pair (Default = ETH) : ") or 'ETH'
+            asset_input = input("Choose your Pair (Default = ETH) : ").upper() or 'ETH'
             
             if asset_input == '0':
                 asset = input("Enter your COIN NAME: ").upper()
                 break
-            elif (asset_input == '1') or (asset_input == 'btc') or (asset_input == 'BTC'):
+            elif (asset_input == '1') or (asset_input == 'BTC'):
                 asset = "BTC"
                 break
-            elif (asset_input == '2') or (asset_input == 'eth') or (asset_input == 'ETH'):
+            elif (asset_input == '2') or (asset_input == 'ETH'):
                 asset = "ETH"
                 break
-            elif (asset_input == '3') or (asset_input == 'bnb') or (asset_input == 'BNB'):
+            elif (asset_input == '3') or (asset_input == 'BNB'):
                 asset = "BNB"
                 break
-            elif (asset_input == '4') or (asset_input == 'link') or (asset_input == 'LINK'):
+            elif (asset_input == '4') or (asset_input == 'LINK'):
                 asset = "LINK"
                 break
-            elif (asset_input == '5') or (asset_input == 'sushi') or (asset_input == 'SUSHI'):
+            elif (asset_input == '5') or (asset_input == 'SUSHI'):
                 asset = "SUSHI"
                 break
-            elif (asset_input == '6') or (asset_input == '1inch') or (asset_input == '1INCH'):
+            elif (asset_input == '6') or (asset_input == '1INCH'):
                 asset = "1INCH"
                 break
-            elif (asset_input == '7') or (asset_input == 'uni') or (asset_input == 'UNI'):
+            elif (asset_input == '7') or (asset_input == 'UNI'):
                 asset = "UNI"
                 break
-            elif (asset_input == '8') or (asset_input == 'trx') or (asset_input == 'TRX'):
+            elif (asset_input == '8') or (asset_input == 'TRX'):
                 asset = "TRX"
                 break
-            elif (asset_input == '9') or (asset_input == 'xrp') or (asset_input == 'XRP'):
+            elif (asset_input == '9') or (asset_input == 'XRP'):
                 asset = "XRP"
                 break
             else: print("❗Invalid Number❗Try again❗\n")
 
         pair =  asset + base
-        core_input = input("\nSet your Core Number for " + asset + "-" + base + " (Default 300) : ") or 300
+        core_input = input("\nSet your Core for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ") or recommended_core
         break
 
     else: print("❗Invalid Number❗Try again❗\n")
 
-margin_input = input("Enter Margin Percentage (Recommended 3.5%) : ") or 3.5
+margin_input = input("Enter Margin Percentage (Recommended 3.5%) : ") or recommended_margin
 real_trade_input = input("Enable Live Trade? [Y/n] ") or 'n'
 
 if real_trade_input == 'Y': 
