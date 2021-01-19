@@ -105,7 +105,7 @@ while True:
     else: print("❗Invalid Number❗Try again❗\n")
 
 core = float(core_input)
-margin_percentage = input("Enter Margin Percentage (Recommended 3.5%) : ") or 3.5
+margin_percentage = float(input("Enter Margin Percentage (Recommended 3.5%) : ")) or 3.5
 real_trade_input = input("Enable Live Trade? [Y/n] ") or 'n'
 if real_trade_input == 'Y': 
     live_trade = True
