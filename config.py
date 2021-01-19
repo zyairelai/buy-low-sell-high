@@ -104,15 +104,18 @@ while True:
 
     else: print("❗Invalid Number❗Try again❗\n")
 
-core = float(core_input)
-margin_percentage = float(input("Enter Margin Percentage (Recommended 3.5%) : ")) or 3.5
+margin_input = input("Enter Margin Percentage (Recommended 3.5%) : ") or 3.5
 real_trade_input = input("Enable Live Trade? [Y/n] ") or 'n'
+
 if real_trade_input == 'Y': 
     live_trade = True
     print("✅ Live Trade Enabled ✅")
 else: 
     live_trade = False
     print("❌ This is a Demo ❌")
+
+core = float(core_input)
+margin_percentage = float(margin_input)
 
 print("Pair :   " + asset + "-" + base)
 print("Core :   " + str(core) + "\n")
