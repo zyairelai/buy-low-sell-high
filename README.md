@@ -2,14 +2,7 @@
 Inspired by [The 3% Signal Strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45).  
 Before running the code, you need to have **AT LEAST 500 USD** worth of BTC or USDT **in your spot wallet**.
 
-## 1. Requirements
-You need to have these libraries installed:
-```
-pip3 install apscheduler==3.6.3
-pip3 install cryptography==3.2 
-pip3 install python-binance==0.7.5
-```
-## 2. Environment Setup
+## 1. Environment Setup
 Paste the following into your Default Shell
 ```
 export API_OWNER="your_binance_username"
@@ -18,11 +11,21 @@ export API_SECRET="your_binance_secret_key"
 ```
 To check if your key is saved by your environment, run `python3 keys.py`
 
+## 2. Requirements
+You need to have these libraries installed:
+```
+pip3 install apscheduler==3.6.3
+pip3 install cryptography==3.2 
+pip3 install python-binance==0.7.5
+pip3 install termcolor==1.1.0
+```
+
 ## 3. Run
 Let's make the magic happens!
 ```
 python3 run.py
 ```
+
 ## 4. Donate for MORE!!
 If you found this useful to generate your passive income, feel free to donate to me so I can IMPROVE MORE!  
 ```
