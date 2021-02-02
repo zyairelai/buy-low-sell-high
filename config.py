@@ -1,5 +1,3 @@
-recommended_margin = 3.5
-
 while True:
     print("Which currency do you want to stack up?")
     print("1. BTC 💰")
@@ -12,6 +10,7 @@ while True:
         base = "BTC"
         round_off = 6
         recommended_core = 0.003
+        recommended_margin = 4
 
         while True:
             print("Here are the supported Pairs: ")
@@ -19,20 +18,19 @@ while True:
             print("2. LINK-BTC")
             print("3. SUSHI-BTC 🍣")
             print("4. 1INCH-BTC 🦄")
-            print("5. TRX-BTC")
-            print("6. XRP-BTC")
+            #print("5. TRX-BTC")
+            #print("6. XRP-BTC")
             print("0. Others (Required more input)")
 
-            asset_input = input("Choose your Pair (Default = LINK) : ") or 'LINK'
+            asset_input = input("Choose your Pair (Default DOGE) : ") or 'DOGE'
 
             if asset_input == '0':
-                asset = input("Enter your COIN NAME: ").upper()
+                asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
                 recommended_core = 0.005
                 break
             elif (asset_input == '1') or (asset_input == 'DOGE'):
                 asset = "DOGE"
                 recommended_margin = 6
-                recommended_core   = 0.002
                 break
             elif (asset_input == '2') or (asset_input == 'LINK'):
                 asset = "LINK"
@@ -43,12 +41,12 @@ while True:
             elif (asset_input == '4') or (asset_input == '1INCH'):
                 asset = "1INCH"
                 break
-            elif (asset_input == '5') or (asset_input == 'TRX'):
-                asset = "TRX"
-                break
-            elif (asset_input == '6') or (asset_input == 'XRP'):
-                asset = "XRP"
-                break
+            # elif (asset_input == '5') or (asset_input == 'TRX'):
+            #     asset = "TRX"
+            #     break
+            # elif (asset_input == '6') or (asset_input == 'XRP'):
+            #     asset = "XRP"
+            #     break
             else: print("❗Invalid Number❗Try again❗\n")
 
         pair = asset + base
@@ -59,6 +57,7 @@ while True:
         base = "USDT"
         round_off = 4
         recommended_core = 300
+        recommended_margin = 3.5
 
         while True:
             print("Here are the supported Pairs: ")
@@ -66,9 +65,9 @@ while True:
             print("2. ETH-USDT 🔥")
             print("3. BNB-USDT")
             print("4. LINK-USDT")
-            print("5. SUSHI-USDT 🍣")
-            print("6. 1INCH-USDT 🦄")
-            print("7. UNI-USDT")
+            print("5. SUSHI-USDT")
+            print("6. 1INCH-USDT")
+            print("7. UNI-USDT 🦄")
             print("8. TRX-USDT")
             print("9. XRP-USDT")
             print("0. Others (Required more input)")
@@ -76,7 +75,7 @@ while True:
             asset_input = input("Choose your Pair (Default = ETH) : ").upper() or 'ETH'
             
             if asset_input == '0':
-                asset = input("Enter your COIN NAME: ").upper()
+                asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
                 break
             elif (asset_input == '1') or (asset_input == 'BTC'):
                 asset = "BTC"
@@ -113,7 +112,7 @@ while True:
 
     else: print("❗Invalid Number❗Try again❗\n")
 
-margin_input = input("Enter Margin Percentage (Recommended 3.5%) : ") or recommended_margin
+margin_input = input("Enter Margin Percentage (Recommended " + str(recommended_margin) + "%) : ") or recommended_margin
 real_trade_input = input("Enable Live Trade? [Y/n] ") or 'n'
 
 if real_trade_input == 'Y': 
