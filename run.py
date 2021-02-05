@@ -5,6 +5,7 @@ try:
     import requests
     import urllib3
     from datetime import datetime
+    from termcolor import colored
     from binance.client import Client
     from binance.exceptions import BinanceAPIException
     from apscheduler.schedulers.blocking import BlockingScheduler
@@ -23,21 +24,31 @@ try:
         change_percent  = round(((current_core - config.core) / config.core * 100), 4)
         trade_amount    = round(abs(current_core - config.core), config.round_off)
 
-        print(asset_info)
-        print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
-        print("Prefix Core          : " + str(config.core) + " " + config.base)
-        print("Current Core         : " + str(current_core) + " " + config.base)
-        print("Percentage Changed   : " + str(change_percent) + " %")
-
         if (current_core > config.core) and (abs(change_percent) > config.margin_percentage):
             if config.live_trade: client.order_market_sell(symbol=config.pair, quoteOrderQty=trade_amount)
-            print("Action               : SELL " + str(trade_amount) + " " + config.base + "\n")
+            print(colored(asset_info, "green"))
+            print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "green"))
+            print(colored("Prefix Core          : " + str(config.core) + " " + config.base, "green"))
+            print(colored("Current Core         : " + str(current_core) + " " + config.base, "green"))
+            print(colored("Percentage Changed   : " + str(change_percent) + " %", "green"))
+            print(colored("Action               : SELL " + str(trade_amount) + " " + config.base + "\n", "green"))
         
         elif (current_core < config.core) and (abs(change_percent) > config.margin_percentage):
             if config.live_trade: client.order_market_buy(symbol=config.pair, quoteOrderQty=trade_amount)
-            print("Action               : BUY " + str(trade_amount) + " " + config.base + "\n")
+            print(colored(asset_info, "red"))
+            print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red"))
+            print(colored("Prefix Core          : " + str(config.core) + " " + config.base, "red"))
+            print(colored("Current Core         : " + str(current_core) + " " + config.base, "red"))
+            print(colored("Percentage Changed   : " + str(change_percent) + " %", "red"))
+            print(colored("Action               : BUY " + str(trade_amount) + " " + config.base + "\n", "red"))
         
-        else: print("Action               : Do Nothing\n")
+        else:
+            print(asset_info)
+            print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
+            print("Prefix Core          : " + str(config.core) + " " + config.base)
+            print("Current Core         : " + str(current_core) + " " + config.base)
+            print("Percentage Changed   : " + str(change_percent) + " %")
+            print("Action               : Do Nothing\n")
 
     try:
         scheduler = BlockingScheduler()

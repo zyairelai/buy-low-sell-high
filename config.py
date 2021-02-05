@@ -1,15 +1,17 @@
+from termcolor import colored
+
 while True:
     print("Which currency do you want to stack up?")
     print("1. BTC 💰")
     print("2. USD 💵")
 
-    based_input = input("Choose your currency (Default = BTC) : ").upper() or 'BTC'
+    based_input = input("Choose your currency (Default BTC) : ").upper() or 'BTC'
     print()
 
     if (based_input == '1') or (based_input == 'BTC') or (based_input == 'BITCOIN'):
         base = "BTC"
         round_off = 6
-        recommended_core = 0.003
+        recommended_core = 0.005
         recommended_margin = 4
 
         while True:
@@ -18,15 +20,14 @@ while True:
             print("2. LINK-BTC")
             print("3. SUSHI-BTC 🍣")
             print("4. 1INCH-BTC 🦄")
-            #print("5. TRX-BTC")
-            #print("6. XRP-BTC")
+            print("5. TRX-BTC")
+            print("6. XRP-BTC")
             print("0. Others (Required more input)")
 
             asset_input = input("Choose your Pair (Default DOGE) : ") or 'DOGE'
 
             if asset_input == '0':
-                asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
-                recommended_core = 0.005
+                asset = input("Enter your COIN SYMBOL (Ex: ETH): ").upper()
                 break
             elif (asset_input == '1') or (asset_input == 'DOGE'):
                 asset = "DOGE"
@@ -41,16 +42,16 @@ while True:
             elif (asset_input == '4') or (asset_input == '1INCH'):
                 asset = "1INCH"
                 break
-            # elif (asset_input == '5') or (asset_input == 'TRX'):
-            #     asset = "TRX"
-            #     break
-            # elif (asset_input == '6') or (asset_input == 'XRP'):
-            #     asset = "XRP"
-            #     break
-            else: print("❗Invalid Number❗Try again❗\n")
+            elif (asset_input == '5') or (asset_input == 'TRX'):
+                asset = "TRX"
+                break
+            elif (asset_input == '6') or (asset_input == 'XRP'):
+                asset = "XRP"
+                break
+            else: print(colored("Invalid Number. Please try again.\n", "red")) 
 
         pair = asset + base
-        core_input = input("\nSet your Core for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ").upper() or recommended_core
+        core_input = input("\nSet your BTC Amount for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ").upper() or recommended_core
         break
 
     elif (based_input == '2') or (based_input == 'USDT') or (based_input == 'USD'):
@@ -72,7 +73,7 @@ while True:
             print("9. XRP-USDT")
             print("0. Others (Required more input)")
 
-            asset_input = input("Choose your Pair (Default = ETH) : ").upper() or 'ETH'
+            asset_input = input("Choose your Pair (Default ETH) : ").upper() or 'ETH'
             
             if asset_input == '0':
                 asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
@@ -104,23 +105,23 @@ while True:
             elif (asset_input == '9') or (asset_input == 'XRP'):
                 asset = "XRP"
                 break
-            else: print("❗Invalid Number❗Try again❗\n")
+            else: print(colored("Invalid Number. Please try again.\n", "red")) 
 
         pair =  asset + base
-        core_input = input("\nSet your Core for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ") or recommended_core
+        core_input = input("\nSet your USD Amount for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ") or recommended_core
         break
 
-    else: print("❗Invalid Number❗Try again❗\n")
+    else: print(colored("Invalid Number. Please try again.\n", "red")) 
 
 margin_input = input("Enter Margin Percentage (Recommended " + str(recommended_margin) + "%) : ") or recommended_margin
 real_trade_input = input("Enable Live Trade? [Y/n] ") or 'n'
 
 if real_trade_input == 'Y': 
     live_trade = True
-    print("✅ Live Trade Enabled ✅")
+    print(colored("Live Trade Enabled", "green"))
 else: 
     live_trade = False
-    print("❌ This is a Demo ❌")
+    print(colored("Live Trade NOT Enabled", "red"))
 
 core = float(core_input)
 margin_percentage = float(margin_input)
