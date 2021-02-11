@@ -52,7 +52,8 @@ try:
 
     try:
         scheduler = BlockingScheduler()
-        scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
+        if config.live_trade: scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
+        else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=3)
         scheduler.start()
 
     except (BinanceAPIException,
