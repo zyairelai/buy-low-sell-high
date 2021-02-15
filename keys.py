@@ -7,7 +7,6 @@ from binance.client import Client
 # export API_SECRET="binance_secret_key"
 
 # Get environment variables
-api_owner   = os.environ.get('API_OWNER')
 api_key     = os.environ.get('API_KEY')
 api_secret  = os.environ.get('API_SECRET')
 # client      = Client(api_key, api_secret)
