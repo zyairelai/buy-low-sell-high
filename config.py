@@ -32,8 +32,8 @@ while True:
     elif (based_input == '2') or (based_input == 'USDT') or (based_input == 'USD'):
         base = "USDT"
         round_off = 4
-        recommended_core = 300
-        recommended_margin = 5
+        recommended_core = 200
+        recommended_margin = 10
 
         print("You want to bet going UP or DOWN? [Up/Down] ")
         print("1. UP")
@@ -59,7 +59,7 @@ while True:
         print("9. XRP")
         print("0. Others (Required more input)")
 
-        asset_input = input("Choose your Pair (Default ETH) : ").upper() or 'ETH'
+        asset_input = input("Choose your Pair (Default BTC) : ").upper() or 'BTC'
         
         if asset_input == '0': asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
 
