@@ -56,3 +56,6 @@ Here is my ROI with this strategy
   <img src="screenshots/Not Gonna Lose.jpg" width="270" height="480">
 </p>
 
+<p align="center">
+  <img src="screenshots/February 2021.png" width="270" height="480">
+</p>
