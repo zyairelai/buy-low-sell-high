@@ -32,7 +32,7 @@ try:
             print(colored("Current Core         : " + str(current_core) + " " + config.base, "green"))
             print(colored("Percentage Changed   : " + str(change_percent) + " %", "green"))
             print(colored("Action               : SELL " + str(trade_amount) + " " + config.base + "\n", "green"))
-        
+
         elif (current_core < config.core) and (abs(change_percent) > config.margin_percentage):
             if config.live_trade: client.order_market_buy(symbol=config.pair, quoteOrderQty=trade_amount)
             print(colored(asset_info, "red"))
@@ -41,7 +41,7 @@ try:
             print(colored("Current Core         : " + str(current_core) + " " + config.base, "red"))
             print(colored("Percentage Changed   : " + str(change_percent) + " %", "red"))
             print(colored("Action               : BUY " + str(trade_amount) + " " + config.base + "\n", "red"))
-        
+
         else:
             print(asset_info)
             print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
