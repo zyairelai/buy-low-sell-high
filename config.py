@@ -12,43 +12,18 @@ while True:
         base = "BTC"
         round_off = 6
         recommended_core = 0.005
-        recommended_margin = 4
+        recommended_margin = 5
 
-        while True:
-            print("Here are the supported Pairs: ")
-            print("1. DOGE-BTC 🚀")
-            print("2. LINK-BTC")
-            print("3. SUSHI-BTC 🍣")
-            print("4. 1INCH-BTC 🦄")
-            print("5. TRX-BTC")
-            print("6. XRP-BTC")
-            print("0. Others (Required more input)")
+        print("Here are the supported Pairs: ")
+        print("1. DOGE 🚀")
+        print("2. 1INCH")
+        print("0. Others (Required more input)")
 
-            asset_input = input("Choose your Pair (Default DOGE) : ") or 'DOGE'
+        asset_input = input("Choose your Pair (Default DOGE) : ") or 'DOGE'
 
-            if asset_input == '0':
-                asset = input("Enter your COIN SYMBOL (Ex: ETH): ").upper()
-                break
-            elif (asset_input == '1') or (asset_input == 'DOGE'):
-                asset = "DOGE"
-                recommended_margin = 6
-                break
-            elif (asset_input == '2') or (asset_input == 'LINK'):
-                asset = "LINK"
-                break
-            elif (asset_input == '3') or (asset_input == 'SUSHI'):
-                asset = "SUSHI"
-                break
-            elif (asset_input == '4') or (asset_input == '1INCH'):
-                asset = "1INCH"
-                break
-            elif (asset_input == '5') or (asset_input == 'TRX'):
-                asset = "TRX"
-                break
-            elif (asset_input == '6') or (asset_input == 'XRP'):
-                asset = "XRP"
-                break
-            else: print(colored("Invalid Number. Please try again.\n", "red")) 
+        if asset_input == '0': asset = input("Enter your COIN SYMBOL (Ex: ETH): ").upper()
+        elif (asset_input == '2') or (asset_input == '1INCH'): asset = "1INCH"
+        else: asset = "DOGE"
 
         pair = asset + base
         core_input = input("\nSet your BTC Amount for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ").upper() or recommended_core
@@ -58,54 +33,46 @@ while True:
         base = "USDT"
         round_off = 4
         recommended_core = 300
-        recommended_margin = 3.5
+        recommended_margin = 5
 
-        while True:
-            print("Here are the supported Pairs: ")
-            print("1. BTC-USDT")
-            print("2. ETH-USDT 🔥")
-            print("3. BNB-USDT")
-            print("4. LINK-USDT")
-            print("5. SUSHI-USDT")
-            print("6. 1INCH-USDT")
-            print("7. UNI-USDT 🦄")
-            print("8. TRX-USDT")
-            print("9. XRP-USDT")
-            print("0. Others (Required more input)")
+        print("You want to bet going UP or DOWN? [Up/Down] ")
+        print("1. UP")
+        print("2. DOWN")
+        direction_input = input("Enter your number: ")
+        if direction_input == '2': 
+            print(colored("You choose DOWN\n", "red"))
+            direction = 'DOWN'
+        else:
+            print(colored("You choose UP\n", "green"))
+            direction = 'UP'
 
-            asset_input = input("Choose your Pair (Default ETH) : ").upper() or 'ETH'
-            
-            if asset_input == '0':
-                asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
-                break
-            elif (asset_input == '1') or (asset_input == 'BTC'):
-                asset = "BTC"
-                break
-            elif (asset_input == '2') or (asset_input == 'ETH'):
-                asset = "ETH"
-                break
-            elif (asset_input == '3') or (asset_input == 'BNB'):
-                asset = "BNB"
-                break
-            elif (asset_input == '4') or (asset_input == 'LINK'):
-                asset = "LINK"
-                break
-            elif (asset_input == '5') or (asset_input == 'SUSHI'):
-                asset = "SUSHI"
-                break
-            elif (asset_input == '6') or (asset_input == '1INCH'):
-                asset = "1INCH"
-                break
-            elif (asset_input == '7') or (asset_input == 'UNI'):
-                asset = "UNI"
-                break
-            elif (asset_input == '8') or (asset_input == 'TRX'):
-                asset = "TRX"
-                break
-            elif (asset_input == '9') or (asset_input == 'XRP'):
-                asset = "XRP"
-                break
-            else: print(colored("Invalid Number. Please try again.\n", "red")) 
+        print("Here are the supported Pairs: ")
+        # AAVE, ADA, DOT, EOS, FIL, SXP, XLM, XTZ, YFI
+        print("1. BTC 🔥")
+        print("2. ETH 🔥")
+        print("3. BNB")
+        print("4. LTC")
+        print("5. LINK")
+        print("6. SUSHI 🍣")
+        print("7. UNI 🦄")
+        print("8. TRX")
+        print("9. XRP")
+        print("0. Others (Required more input)")
+
+        asset_input = input("Choose your Pair (Default ETH) : ").upper() or 'ETH'
+        
+        if asset_input == '0': asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
+
+        elif (asset_input == '1') or (asset_input == 'BTC'): asset = "BTC" + direction
+        elif (asset_input == '2') or (asset_input == 'ETH'): asset = "ETH" + direction
+        elif (asset_input == '3') or (asset_input == 'BNB'): asset = "BNB" + direction
+        elif (asset_input == '4') or (asset_input == 'LTC'): asset = "LTC" + direction
+        elif (asset_input == '5') or (asset_input == 'LINK'): asset = "LINK" + direction
+        elif (asset_input == '6') or (asset_input == 'SUSHI'): asset = "SUSHI" + direction
+        elif (asset_input == '7') or (asset_input == 'UNI'): asset = "UNI" + direction
+        elif (asset_input == '8') or (asset_input == 'TRX'): asset = "TRX" + direction
+        elif (asset_input == '9') or (asset_input == 'XRP'): asset = "XRP" + direction
+        else: print(colored("Invalid Number. Please try again.\n", "red")) 
 
         pair =  asset + base
         core_input = input("\nSet your USD Amount for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ") or recommended_core
