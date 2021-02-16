@@ -57,5 +57,5 @@ Here is my ROI with this strategy
 </p>
 
 <p align="center">
-  <img src="screenshots/February 2021.png" width="270" height="480">
+  <img src="screenshots/February 2021.png">
 </p>
