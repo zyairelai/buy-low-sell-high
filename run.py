@@ -56,9 +56,10 @@ try:
         else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=3)
         scheduler.start()
 
-    except (BinanceAPIException,
-            ConnectionResetError,
+    except (KeyError,
             socket.timeout,
+            BinanceAPIException,
+            ConnectionResetError,
             urllib3.exceptions.ProtocolError,
             urllib3.exceptions.ReadTimeoutError,
             requests.exceptions.ConnectionError,
