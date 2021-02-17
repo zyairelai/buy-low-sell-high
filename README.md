@@ -1,9 +1,10 @@
 # BUY-LOW-SELL-HIGH
 Inspired by [The 3% Signal Strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)
+You can check my daily PnL [here](https://docs.google.com/spreadsheets/d/1VsOY7B7WWT0D67ifggpbsdHrQEegl0DaXHfWhsx--tY/edit#gid=103443936)
 
 # DISCLAIMER
 
-This automation software is purely handcoded by me [@zyairelai](https://github.com/zyairelai) from scratch with my personal manual trading strategy.  
+This automation software is purely handcoded by [@zyairelai](https://github.com/zyairelai) from scratch with my personal manual trading strategy.  
 Kindly provide feedback through my email `zyairelai@gmail.com` if you are using my repository.  
 If you had modified or improved my code feel free to share with me and we may have futher discussion on this project!  
 Distribution of the software is allowed. However, SELLING is NOT allowed.  
