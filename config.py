@@ -3,6 +3,9 @@ from termcolor import colored
 print("Which currency do you want to stack up?")
 print("1. BTC 💰")
 print("2. USD 💵")
+# print("3. BNB ")
+# print("4. ETH ")
+
 based_input = input("Choose your currency : ").upper()
 
 if (based_input == '1'):
@@ -27,19 +30,22 @@ if (based_input == '1'):
 else:
     base = "USDT"
     round_off = 4
-    recommended_core = 200
-    recommended_margin = 5
 
-    print("You want to bet going UP or DOWN?")
-    print("1. UP")
-    print("2. DOWN")
+    print("Which token do you want to trade?")
+    print("1. NORMAL TOKEN")
+    print("2. LEVERAGE TOKEN")
+
     direction_input = input("Enter your number : ")
     if direction_input == '2':
-        print(colored("You choose DOWN\n", "red"))
-        direction = 'DOWN'
-    else:
-        print(colored("You choose UP\n", "green"))
+        print(colored("You choose: LEVERAGE TOKEN\n", "red"))
         direction = 'UP'
+        recommended_core = 200
+        recommended_margin = 5
+    else:
+        print(colored("You choose: NORMAL TOKEN\n", "green"))
+        direction = ''
+        recommended_core = 300
+        recommended_margin = 4
 
     print("Here are the supported Pairs : ")
     # AAVE, ADA, DOT, EOS, FIL, SXP, XLM, XTZ, YFI
@@ -50,8 +56,8 @@ else:
     print("5. LINK")
     print("6. SUSHI 🍣")
     print("7. UNI 🦄")
-    print("8. TRX")
-    print("9. XRP")
+    print("8. XRP")
+    print("9. 1INCH")
     print("0. Others (Required more input)")
 
     asset_input = input("\nChoose your Pair (Default BTC) : ").upper()
@@ -63,8 +69,8 @@ else:
     elif (asset_input == '5') or (asset_input == 'LINK'): asset = "LINK" + direction
     elif (asset_input == '6') or (asset_input == 'SUSHI'): asset = "SUSHI" + direction
     elif (asset_input == '7') or (asset_input == 'UNI'): asset = "UNI" + direction
-    elif (asset_input == '8') or (asset_input == 'TRX'): asset = "TRX" + direction
-    elif (asset_input == '9') or (asset_input == 'XRP'): asset = "XRP" + direction
+    elif (asset_input == '8') or (asset_input == 'TRX'): asset = "XRP" + direction
+    elif (asset_input == '9') or (asset_input == 'XRP'): asset = "1INCH"
     else: asset = "BTC" + direction
 
     pair =  asset + base
