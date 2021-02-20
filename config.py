@@ -16,23 +16,27 @@ if (based_input == '1'):
 
     print("Here are the supported Pairs : ")
     print("1. ETH 🔥")
-    print("2. BNB")
+    print("2. BNB 🔥")
     print("3. DOGE 🚀")
     print("4. LINK")
     print("5. 1INCH 🦄")
     print("6. SUSHI 🍣")
-    print("7. XRP")
+    # print("7. ")
+    print("8. MATIC")
+    print("9. XRP")
     print("0. Others (Required more input)")
     asset_input = input("\nChoose your Pair : ")
 
     if asset_input == '0': asset = input("Enter your COIN SYMBOL (Ex: ETH): ").upper()
-    elif (asset_input == '1') or (asset_input == 'ETH'): asset = "ETH"
-    elif (asset_input == '2') or (asset_input == 'BNB'): asset = "BNB"
-    elif (asset_input == '3') or (asset_input == 'DOGE'): asset = "DOGE"
-    elif (asset_input == '4') or (asset_input == 'LINK'): asset = "LINK"
+    elif (asset_input == '1') or (asset_input == 'ETH')  : asset = "ETH"
+    elif (asset_input == '2') or (asset_input == 'BNB')  : asset = "BNB"
+    elif (asset_input == '3') or (asset_input == 'DOGE') : asset = "DOGE"
+    elif (asset_input == '4') or (asset_input == 'LINK') : asset = "LINK"
     elif (asset_input == '5') or (asset_input == '1INCH'): asset = "1INCH"
     elif (asset_input == '6') or (asset_input == 'SUSHI'): asset = "SUSHI"
-    elif (asset_input == '7') or (asset_input == 'XRP'): asset = "XRP"
+    # elif (asset_input == '7') or (asset_input == ''): asset = ""
+    elif (asset_input == '8') or (asset_input == 'MATIC'): asset = "MATIC"
+    elif (asset_input == '9') or (asset_input == 'XRP')  : asset = "XRP"
     else: asset = "ETH"
 
     pair = asset + base
@@ -62,26 +66,26 @@ else:
     # AAVE, ADA, DOT, EOS, FIL, SXP, XLM, XTZ, YFI
     print("1. BTC 🔥")
     print("2. ETH 🔥")
-    print("3. BNB")
-    print("4. LTC")
-    print("5. LINK")
-    print("6. SUSHI 🍣")
-    print("7. UNI 🦄")
-    print("8. XRP")
-    print("9. 1INCH")
+    print("3. BNB 🔥")
+    print("4. DOT ")
+    print("5. LTC ")
+    print("6. LINK ")
+    print("7. SUSHI 🍣")
+    print("8. UNI 🦄")
+    print("9. XRP ")
     print("0. Others (Required more input)")
 
     asset_input = input("\nChoose your Pair (Default BTC) : ").upper()
 
     if asset_input == '0': asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
-    elif (asset_input == '2') or (asset_input == 'ETH'): asset = "ETH" + direction
-    elif (asset_input == '3') or (asset_input == 'BNB'): asset = "BNB" + direction
-    elif (asset_input == '4') or (asset_input == 'LTC'): asset = "LTC" + direction
-    elif (asset_input == '5') or (asset_input == 'LINK'): asset = "LINK" + direction
-    elif (asset_input == '6') or (asset_input == 'SUSHI'): asset = "SUSHI" + direction
-    elif (asset_input == '7') or (asset_input == 'UNI'): asset = "UNI" + direction
-    elif (asset_input == '8') or (asset_input == 'TRX'): asset = "XRP" + direction
-    elif (asset_input == '9') or (asset_input == 'XRP'): asset = "1INCH"
+    elif (asset_input == '2') or (asset_input == 'ETH')  : asset = "ETH"   + direction
+    elif (asset_input == '3') or (asset_input == 'BNB')  : asset = "BNB"   + direction
+    elif (asset_input == '4') or (asset_input == 'DOT')  : asset = "DOT"   + direction
+    elif (asset_input == '5') or (asset_input == 'LTC')  : asset = "LTC"   + direction
+    elif (asset_input == '6') or (asset_input == 'LINK') : asset = "LINK"  + direction
+    elif (asset_input == '7') or (asset_input == 'SUSHI'): asset = "SUSHI" + direction
+    elif (asset_input == '8') or (asset_input == 'UNI')  : asset = "UNI"   + direction
+    elif (asset_input == '9') or (asset_input == 'XRP')  : asset = "XRP"   + direction
     else: asset = "BTC" + direction
 
     pair =  asset + base
