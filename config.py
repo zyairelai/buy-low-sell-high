@@ -16,7 +16,7 @@ if (based_input == '2'):
     recommended_core    = quote_BTC.recommended_core
     recommended_margin  = quote_BTC.recommended_margin
 
-if (based_input == '3'):
+elif (based_input == '3'):
     base = "ETH"
     print(colored(base + " is the quote asset", "green"))
     import quote_ETH
@@ -25,7 +25,7 @@ if (based_input == '3'):
     recommended_core    = quote_ETH.recommended_core
     recommended_margin  = quote_ETH.recommended_margin
 
-if (based_input == '4'):
+elif (based_input == '4'):
     base = "USDT"
     print(colored(base + " is the quote asset", "green"))
     import quote_USDT

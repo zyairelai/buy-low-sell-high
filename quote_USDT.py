@@ -1,5 +1,5 @@
-base = "USDT"
-round_off = 4
+from termcolor import colored
+round_off = 2
 
 print("Which token do you want to trade?")
 print("1. NORMAL TOKEN")
@@ -33,15 +33,12 @@ print("0. Others (Required more input)")
 asset_input = input("\nChoose your Pair (Default BTC) : ").upper()
 
 if asset_input == '0': asset = input("Enter your COIN NAME (Ex: BTC): ").upper()
-elif (asset_input == '2') or (asset_input == 'ETH')  : asset = "ETH"   + direction
-elif (asset_input == '3') or (asset_input == 'BNB')  : asset = "BNB"   + direction
-elif (asset_input == '4') or (asset_input == 'DOT')  : asset = "DOT"   + direction
-elif (asset_input == '5') or (asset_input == 'LTC')  : asset = "LTC"   + direction
-elif (asset_input == '6') or (asset_input == 'LINK') : asset = "LINK"  + direction
-elif (asset_input == '7') or (asset_input == 'SUSHI'): asset = "SUSHI" + direction
-elif (asset_input == '8') or (asset_input == 'UNI')  : asset = "UNI"   + direction
-elif (asset_input == '9') or (asset_input == 'XRP')  : asset = "XRP"   + direction
+elif (asset_input == '2') : asset = "ETH"   + direction
+elif (asset_input == '3') : asset = "BNB"   + direction
+elif (asset_input == '4') : asset = "DOT"   + direction
+elif (asset_input == '5') : asset = "LTC"   + direction
+elif (asset_input == '6') : asset = "LINK"  + direction
+elif (asset_input == '7') : asset = "SUSHI" + direction
+elif (asset_input == '8') : asset = "UNI"   + direction
+elif (asset_input == '9') : asset = "XRP"   + direction
 else: asset = "BTC" + direction
-
-pair =  asset + base
-core_input = input("Set USD Amount for " + asset + "-" + base + " (Default " + str(recommended_core) + ") : ") or recommended_core
