@@ -42,3 +42,4 @@ elif (asset_input == '7') : asset = "SUSHI" + direction
 elif (asset_input == '8') : asset = "UNI"   + direction
 elif (asset_input == '9') : asset = "XRP"   + direction
 else: asset = "BTC" + direction
+print(colored("The chosen coin is " + asset + "\n", "green"))

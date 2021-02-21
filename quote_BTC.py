@@ -26,3 +26,6 @@ elif (asset_input == '7') : asset = "UNI"
 elif (asset_input == '8') : asset = "MATIC"
 elif (asset_input == '9') : asset = "XRP"
 else: asset = "ETH"
+
+from termcolor import colored
+print(colored("The chosen coin is " + asset + "\n", "green"))
