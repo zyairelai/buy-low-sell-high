@@ -15,7 +15,7 @@ print("9. XRP")
 print("0. Others (Required more input)")
 asset_input = input("\nChoose your Pair : ")
 
-if asset_input == '0': asset = input("Enter your COIN SYMBOL (Ex: BNB): ")
+if asset_input == '0': asset = input("Enter your COIN SYMBOL (Ex: BNB): ").upper()
 elif (asset_input == '1') : asset = "BNB"
 elif (asset_input == '2') : asset = "AAVE"
 elif (asset_input == '3') : asset = "ADA"
