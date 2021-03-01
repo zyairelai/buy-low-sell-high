@@ -50,13 +50,7 @@ USDT (ERC20) : 0x7701948f0477e629c5bb5d79f99b833133ab30d5
 ## 5. Screenshot Validation
 Here is my ROI with this strategy
 
+### Screenshot PnL on 28th February 2021
 <p align="center">
-  <img src="screenshots/November 2020.jpg" width="270" height="480">
-  <img src="screenshots/January 2021.jpg" width="270" height="480">
-  <img src="screenshots/Not Gonna Lose.jpg" width="270" height="480">
-</p>
-
-## Screenshot PnL on 15th February 2021
-<p align="center">
-  <img src="screenshots/February 2021.png">
+  <img src="screenshots/Feb 2021.png">
 </p>
