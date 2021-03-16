@@ -2,16 +2,16 @@ round_off = 6
 recommended_core = 0.005
 recommended_margin = 5
 
-print("\nHere are the supported Pairs : ")
+print("\nHere are the Recommended Pairs : ")
 print("1. ETH 🔥")
 print("2. BNB 🔥")
 print("3. DOGE 🚀")
-print("4. LINK")
-print("5. 1INCH 🦄")
-print("6. SUSHI 🍣")
-print("7. UNI")
-print("8. MATIC")
-print("9. XRP")
+# print("4. LINK")
+# print("5. 1INCH 🦄")
+# print("6. SUSHI 🍣")
+# print("7. UNI")
+# print("8. MATIC")
+# print("9. XRP")
 print("0. Others (Required more input)")
 asset_input = input("\nChoose your Pair : ")
 

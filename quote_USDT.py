@@ -17,17 +17,17 @@ else:
     recommended_core = 300
     recommended_margin = 4
 
-print("Here are the supported Pairs : ")
+print("Here are the Recommended Pairs : ")
 # AAVE, ADA, DOT, EOS, FIL, SXP, XLM, XTZ, YFI
 print("1. BTC 🔥")
 print("2. ETH 🔥")
 print("3. BNB 🔥")
-print("4. DOT ")
-print("5. LTC ")
-print("6. LINK ")
-print("7. SUSHI 🍣")
-print("8. UNI 🦄")
-print("9. XRP ")
+# print("4. DOT ")
+# print("5. LTC ")
+# print("6. LINK ")
+# print("7. SUSHI 🍣")
+# print("8. UNI 🦄")
+# print("9. XRP ")
 print("0. Others (Required more input)")
 
 asset_input = input("\nChoose your Pair (Default BTC) : ").upper()

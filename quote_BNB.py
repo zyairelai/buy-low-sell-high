@@ -2,16 +2,16 @@ round_off = 3
 recommended_core = 1
 recommended_margin = 5
 
-print("\nHere are the supported Pairs : ")
+print("\nHere are the Recommended Pairs : ")
 print("1. BURGER 🍔")
 print("2. CAKE 🎂")
 print("3. SUSHI 🍣")
-print("4. AAVE")
-print("5. ADA")
-print("6. DOT")
-print("7. MATIC")
-print("8. XRP")
-print("9. YFI")
+# print("4. AAVE")
+# print("5. ADA")
+# print("6. DOT")
+# print("7. MATIC")
+# print("8. XRP")
+# print("9. YFI")
 print("0. Others (Required more input)")
 asset_input = input("\nChoose your Pair : ")
 

@@ -2,7 +2,7 @@ round_off = 5
 recommended_core = 0.1
 recommended_margin = 5
 
-print("\nHere are the supported Pairs : ")
+print("\nHere are the Recommended Pairs : ")
 print("1. BNB 🔥")
 print("2. AAVE")
 print("3. ADA")
