@@ -1,4 +1,4 @@
-live_trade = False
+live_trade = True
 asset = ["DOGE", "ETH", "BNB"]
 base  = ["BTC", "BTC", "BTC"]
 core  = [0.005, 0.004, 0.004]
@@ -33,12 +33,12 @@ try:
     client      = Client(api_key, api_secret)
 
     def record_tmp(i):
-        if not os.path.exists("tmp"): os.makedirs("tmp")
-        with open((os.path.join("tmp", pair[i] + ".txt")), "w", encoding="utf-8") as timestamp_record:
+        if not os.path.exists("core_number"): os.makedirs("core_number")
+        with open((os.path.join("core_number", pair[i] + ".txt")), "w", encoding="utf-8") as timestamp_record:
             timestamp_record.write(str(core[i]))
 
     def retrieve_tmp(i):
-        with open((os.path.join("tmp", pair[i] + ".txt")), "r", encoding="utf-8") as timestamp_record:
+        with open((os.path.join("core_number", pair[i] + ".txt")), "r", encoding="utf-8") as timestamp_record:
             return float(timestamp_record.read())
 
     # Record the core number before running
