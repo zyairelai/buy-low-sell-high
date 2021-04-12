@@ -85,7 +85,7 @@ try:
 
     try:
         scheduler = BlockingScheduler()
-        if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', minute='0')
+        if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
         else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=3)
         scheduler.start()
     except (KeyError,
