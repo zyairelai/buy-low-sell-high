@@ -1,4 +1,5 @@
 __pycache__/
 core_number/
+tmp/
 ERROR/
 test.py
