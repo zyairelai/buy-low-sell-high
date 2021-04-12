@@ -1,8 +1,8 @@
 live_trade = True
-asset = ["DOGE", "ETH", "BNB"]
-base  = ["BTC", "BTC", "BTC"]
-core  = [0.005, 0.004, 0.004]
-margin_percentage = [5, 3.5, 4]
+asset = ["DOGE", "ETH", "BNB", "CAKE", "SUSHI", "LINK", "ADA", "XRP"]
+base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
+core  = [0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
+margin_percentage = [5, 3.5, 4, 4, 4, 3.5, 3.5, 3.5]
 pair,round_off = [], []
 
 for coin in base:
