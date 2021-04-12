@@ -1,4 +1,4 @@
-live_trade = False
+live_trade = True
 asset = ["DOGE", "ETH", "BNB", "CAKE", "SUSHI", "LINK", "ADA", "XRP"]
 base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
 core  = [0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
