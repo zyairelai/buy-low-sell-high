@@ -1,20 +1,13 @@
 live_trade = True
 asset = ["BNBUP", "BTCUP"]
-base  = ["USDT", "USDT"]
+base  = "USDT"
 core  = 300
 margin_percentage = 4
-pair,round_off = [], []
-
-for coin in base:
-    if coin == "USDT": decimal = 2
-    elif coin == "BTC": decimal = 6
-    elif coin == "ETH": decimal = 5
-    elif coin == "BNB": decimal = 3
-    else: decimal == 4
-    round_off.append(decimal)
+round_off = 2
+pair = []
 
 for i in range(len(asset)):
-    pair.append(asset[i] + base[i])
+    pair.append(asset[i] + base)
 
 try:
     import os
@@ -38,33 +31,33 @@ try:
             asset_price     = float(asset_info.get("price"))
             asset_balance   = float(client.get_asset_balance(asset=asset[i]).get("free"))
 
-            current_core    = round(asset_balance * asset_price, round_off[i])
+            current_core    = round(asset_balance * asset_price, round_off)
             change_percent  = round(((current_core - core) / core * 100), 4)
-            trade_amount    = round(abs(current_core - core), round_off[i])
+            trade_amount    = round(abs(current_core - core), round_off)
 
             if (current_core > core) and (abs(change_percent) > margin_percentage):
                 if live_trade: client.order_market_sell(symbol=pair[i], quoteOrderQty=trade_amount)
                 print(colored(asset_info, "green"))
                 print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "green"))
-                print(colored("Prefix Core          : " + str(core) + " " + base[i], "green"))
-                print(colored("Current Core         : " + str(current_core) + " " + base[i], "green"))
+                print(colored("Prefix Core          : " + str(core) + " " + base, "green"))
+                print(colored("Current Core         : " + str(current_core) + " " + base, "green"))
                 print(colored("Percentage Changed   : " + str(change_percent) + " %", "green"))
-                print(colored("Action               : SELL " + str(trade_amount) + " " + base[i] + "\n", "green"))
+                print(colored("Action               : SELL " + str(trade_amount) + " " + base + "\n", "green"))
 
             elif (current_core < core) and (abs(change_percent) > margin_percentage):
                 if live_trade: client.order_market_buy(symbol=pair[i], quoteOrderQty=trade_amount)
                 print(colored(asset_info, "red"))
                 print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red"))
-                print(colored("Prefix Core          : " + str(core) + " " + base[i], "red"))
-                print(colored("Current Core         : " + str(current_core) + " " + base[i], "red"))
+                print(colored("Prefix Core          : " + str(core) + " " + base, "red"))
+                print(colored("Current Core         : " + str(current_core) + " " + base, "red"))
                 print(colored("Percentage Changed   : " + str(change_percent) + " %", "red"))
-                print(colored("Action               : BUY " + str(trade_amount) + " " + base[i] + "\n", "red"))
+                print(colored("Action               : BUY " + str(trade_amount) + " " + base + "\n", "red"))
 
             else:
                 print(asset_info)
                 print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
-                print("Prefix Core          : " + str(core) + " " + base[i])
-                print("Current Core         : " + str(current_core) + " " + base[i])
+                print("Prefix Core          : " + str(core) + " " + base)
+                print("Current Core         : " + str(current_core) + " " + base)
                 print("Percentage Changed   : " + str(change_percent) + " %")
                 print("Action               : Do Nothing\n")
 
