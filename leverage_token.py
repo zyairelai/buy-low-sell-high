@@ -1,5 +1,5 @@
 live_trade = True
-asset = ["BNBUP", "BTCUP"]
+asset = ["BNBUP", "BTCUP", "ETHUP"]
 base  = "USDT"
 core  = 300
 margin_percentage = 4
