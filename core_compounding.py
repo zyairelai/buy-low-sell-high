@@ -1,7 +1,7 @@
 live_trade = True
 asset = ["DOGE", "ETH", "BNB", "ADA", "CAKE", "SUSHI", "LINK", "XRP"]
 base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
-core  = 0.004
+core  = 0.005
 margin_percentage = [5, 4, 4, 4, 4, 4, 4, 4]
 pair,round_off = [], []
 
