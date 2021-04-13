@@ -1,7 +1,7 @@
-live_trade = True
+live_trade = False
 asset = ["DOGE", "ETH", "BNB", "CAKE", "SUSHI", "LINK", "ADA", "XRP"]
 base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
-core  = [0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
+core  = 0.004
 margin_percentage = [5, 3.5, 4, 4, 4, 3.5, 3.5, 3.5]
 pair,round_off = [], []
 
@@ -34,7 +34,7 @@ try:
     
     def buy_low_sell_high():
         for i in range(len(pair)):
-            my_core_number  = core[i]
+            my_core_number  = core
             asset_info      = client.get_symbol_ticker(symbol=pair[i])
             asset_price     = float(asset_info.get("price"))
             asset_balance   = float(client.get_asset_balance(asset=asset[i]).get("free"))
