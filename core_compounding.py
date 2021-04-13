@@ -1,4 +1,4 @@
-live_trade = True
+live_trade = False
 asset = ["DOGE", "ETH", "BNB", "CAKE", "SUSHI", "LINK", "ADA", "XRP"]
 base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
 core  = [0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
@@ -31,22 +31,10 @@ try:
     api_key     = os.environ.get('API_KEY')
     api_secret  = os.environ.get('API_SECRET')
     client      = Client(api_key, api_secret)
-
-    def record_tmp(new_core):
-        if not os.path.exists("core_number"): os.makedirs("core_number")
-        with open((os.path.join("core_number", pair[i] + ".txt")), "w", encoding="utf-8") as timestamp_record:
-            timestamp_record.write(str(new_core))
-
-    def retrieve_tmp(i):
-        with open((os.path.join("core_number", pair[i] + ".txt")), "r", encoding="utf-8") as timestamp_record:
-            return float(timestamp_record.read())
-
-    # Record the core number before running
-    for i in range(len(pair)): record_tmp(core[i])
     
     def buy_low_sell_high():
         for i in range(len(pair)):
-            my_core_number  = retrieve_tmp(i)
+            my_core_number  = core[i]
             asset_info      = client.get_symbol_ticker(symbol=pair[i])
             asset_price     = float(asset_info.get("price"))
             asset_balance   = float(client.get_asset_balance(asset=asset[i]).get("free"))
@@ -65,8 +53,6 @@ try:
                 print(colored("Action               : SELL " + str(trade_amount) + " " + base[i] + "\n", "green"))
 
             elif (current_core < my_core_number) and (abs(change_percent) > margin_percentage[i]):
-                new_core = my_core_number + (core[i] * 0.05)
-                record_tmp(new_core)
                 if live_trade: client.order_market_buy(symbol=pair[i], quoteOrderQty=trade_amount)
                 print(colored(asset_info, "red"))
                 print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red"))
@@ -86,7 +72,7 @@ try:
     try:
         scheduler = BlockingScheduler()
         if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
-        else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=3)
+        else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=10)
         scheduler.start()
     except (KeyError,
             socket.timeout,
