@@ -5,6 +5,9 @@ core  = [0.005, 0.005, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
 margin_percentage = [5, 4, 4, 4, 4, 4, 4, 4, 4]
 pair,round_off = [], []
 
+for i in range(len(asset)):
+    pair.append(asset[i] + base[i])
+
 for coin in base:
     if coin == "USDT": decimal = 2
     elif coin == "BTC": decimal = 6
@@ -12,9 +15,6 @@ for coin in base:
     elif coin == "BNB": decimal = 3
     else: decimal == 4
     round_off.append(decimal)
-
-for i in range(len(asset)):
-    pair.append(asset[i] + base[i])
 
 try:
     import os
@@ -74,6 +74,7 @@ try:
         if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
         else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=10)
         scheduler.start()
+
     except (KeyError,
             socket.timeout,
             BinanceAPIException,
@@ -84,10 +85,8 @@ try:
             requests.exceptions.ConnectTimeout,
             requests.exceptions.ReadTimeout) as e:
 
-        print(e)
-        # if not os.path.exists("Error_Message"): os.makedirs("Error_Message")
-        # with open((os.path.join("Error_Message", config.pair + ".txt")), "a") as error_message:
-        #     error_message.write("[!] " + config.pair + " - " + "Created at : " + datetime.today().strftime("%d-%m-%Y @ %H:%M:%S") + "\n")
-        #     error_message.write(str(e) + "\n\n")
+        with open("Error_Message.txt", "a") as error_message:
+            error_message.write("[!] Created at : " + datetime.today().strftime("%d-%m-%Y @ %H:%M:%S") + "\n")
+            error_message.write(str(e) + "\n\n")
 
 except KeyboardInterrupt: print("\n\nAborted.\n")
