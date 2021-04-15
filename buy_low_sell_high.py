@@ -1,4 +1,4 @@
-live_trade = False
+live_trade = True
 asset = ["DOGE", "ETH", "BNB", "ADA", "LINK", "LTC", "TRX", "UNI", "XRP"]
 base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
 core  = [0.005, 0.005, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
@@ -31,7 +31,7 @@ try:
     api_key     = os.environ.get('API_KEY')
     api_secret  = os.environ.get('API_SECRET')
     client      = Client(api_key, api_secret)
-    
+
     def buy_low_sell_high():
         for i in range(len(pair)):
             my_core_number  = core[i]
