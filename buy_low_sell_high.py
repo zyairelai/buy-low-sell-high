@@ -1,7 +1,7 @@
 live_trade = True
-asset = ["DOGE", "ETH", "BNB", "ADA", "LINK", "LTC", "TRX", "UNI", "XRP"]
+asset = ["DOGE", "BNB", "ETH", "ADA", "LINK", "LTC", "TRX", "UNI", "XRP"]
 base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
-core  = [0.005, 0.005, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
+core  = [0.01, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
 margin_percentage = [5, 4, 4, 4, 4, 4, 4, 4, 4]
 pair,round_off = [], []
 
@@ -71,7 +71,7 @@ try:
 
     try:
         scheduler = BlockingScheduler()
-        if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', minute='0, 30')
+        if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', minute='0')
         else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=10)
         scheduler.start()
 
