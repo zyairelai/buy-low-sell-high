@@ -1,12 +1,12 @@
 live_trade = True
 asset = ["ADA", "BNB", "DOGE", "FET", "MATIC", "LINK", "LUNA", "SXP", "1INCH", "UNI", "XRP"]
-base  = ["BTC"]
+base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
 core  = [0.005, 0.01, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
 margin_percentage = 4
 pair,round_off = [], []
 
 for i in range(len(asset)):
-    pair.append(asset[i] + base[0])
+    pair.append(asset[i] + base[i])
 
 for coin in base:
     if coin == "USDT": decimal = 2
@@ -47,25 +47,25 @@ try:
                 if live_trade: client.order_market_sell(symbol=pair[i], quoteOrderQty=trade_amount)
                 print(colored(asset_info, "green"))
                 print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "green"))
-                print(colored("Prefix Core          : " + str(my_core_number) + " " + base[0], "green"))
-                print(colored("Current Core         : " + str(current_core) + " " + base[0], "green"))
+                print(colored("Prefix Core          : " + str(my_core_number) + " " + base[i], "green"))
+                print(colored("Current Core         : " + str(current_core) + " " + base[i], "green"))
                 print(colored("Percentage Changed   : " + str(change_percent) + " %", "green"))
-                print(colored("Action               : SELL " + str(trade_amount) + " " + base[0] + "\n", "green"))
+                print(colored("Action               : SELL " + str(trade_amount) + " " + base[i] + "\n", "green"))
 
             elif (current_core < my_core_number) and (abs(change_percent) > margin_percentage):
                 if live_trade: client.order_market_buy(symbol=pair[i], quoteOrderQty=trade_amount)
                 print(colored(asset_info, "red"))
                 print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red"))
-                print(colored("Prefix Core          : " + str(my_core_number) + " " + base[0], "red"))
-                print(colored("Current Core         : " + str(current_core) + " " + base[0], "red"))
+                print(colored("Prefix Core          : " + str(my_core_number) + " " + base[i], "red"))
+                print(colored("Current Core         : " + str(current_core) + " " + base[i], "red"))
                 print(colored("Percentage Changed   : " + str(change_percent) + " %", "red"))
-                print(colored("Action               : BUY " + str(trade_amount) + " " + base[0] + "\n", "red"))
+                print(colored("Action               : BUY " + str(trade_amount) + " " + base[i] + "\n", "red"))
 
             else:
                 print(asset_info)
                 print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
-                print("Prefix Core          : " + str(my_core_number) + " " + base[0])
-                print("Current Core         : " + str(current_core) + " " + base[0])
+                print("Prefix Core          : " + str(my_core_number) + " " + base[i])
+                print("Current Core         : " + str(current_core) + " " + base[i])
                 print("Percentage Changed   : " + str(change_percent) + " %")
                 print("Action               : Do Nothing\n")
 
