@@ -1,7 +1,7 @@
 live_trade = True
-asset = ["ADA", "BNB", "DOGE", "LINK", "LUNA", "SXP", "TRX", "XRP"]
-base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
-core  = [0.01, 0.01, 0.01, 0.005, 0.005, 0.005, 0.005, 0.01]
+asset = ["ADA", "BNB", "DOGE", "FET", "LINK", "LUNA", "SXP", "TRX", "UNI", "XRP"]
+base  = ["BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC", "BTC"]
+core  = [0.005, 0.01, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005, 0.005]
 margin_percentage = 4
 pair,round_off = [], []
 
