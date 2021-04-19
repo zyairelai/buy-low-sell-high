@@ -1,4 +1,3 @@
-rm -rf screenshots/
 heroku git:remote -a core-compounding
 git add .
 git commit -m "heroku"
