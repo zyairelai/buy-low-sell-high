@@ -1,7 +1,7 @@
 live_trade = True
 
-asset = ["ADA", "BNB", "DOGE", "ETH", "FET", "MATIC", "NEO", "LINK", "LUNA", "SXP", "1INCH", "UNI"]#, "XRP"]
-core  = [0.005, 0.01, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005 ,0.005, 0.005, 0.005, 0.005]#, 0.005]
+asset = ["ADA", "BNB", "DOGE", "ETH", "FET", "MATIC", "NEO", "LINK", "LUNA", "SXP", "1INCH", "UNI", "XRP"]
+core  = [0.005, 0.01, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005 ,0.005, 0.005, 0.005, 0.005, 0.005]
 # core  = [300, 500, 500, 300, 300, 300, 300, 300, 300, 300, 300, 300] # Based USDT
 
 base  = ["BTC"] # affected variable : based[0] & round_off[0]
