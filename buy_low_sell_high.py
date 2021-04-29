@@ -1,8 +1,7 @@
 live_trade = True
 
-asset = ["ADA", "BNB", "DOGE", "ETH", "FET", "MATIC", "NEO", "LINK", "LUNA", "SXP", "1INCH", "UNI", "XRP"]
-core  = [0.005, 0.01, 0.01, 0.005, 0.005, 0.005, 0.005, 0.005 ,0.005, 0.005, 0.005, 0.005, 0.005]
-# core  = [300, 500, 500, 300, 300, 300, 300, 300, 300, 300, 300, 300] # Based USDT
+asset = ["ADA", "ANKR", "BNB", "CELR", "DOGE", "ETH", "FET", "MATIC", "NEO", "LINK", "LUNA", "POND", "SXP", "1INCH", "UNI", "VET", "XRP"]
+core  = [0.005]
 
 base  = ["BTC"] # affected variable : based[0] & round_off[0]
 margin_percentage = 5
@@ -37,30 +36,30 @@ try:
 
     def buy_low_sell_high():
         for i in range(len(pair)):
-            my_core_number  = core[i]
+            my_core_number  = core[0]
             asset_info      = client.get_symbol_ticker(symbol=pair[i])
             asset_price     = float(asset_info.get("price"))
             asset_balance   = float(client.get_asset_balance(asset=asset[i]).get("free"))
 
-            current_core    = round(asset_balance * asset_price, round_off[0])
-            change_percent  = round(((current_core - my_core_number) / my_core_number * 100), 4)
-            trade_amount    = round(abs(current_core - my_core_number), round_off[0])
+            current_holding = round(asset_balance * asset_price, round_off[0])
+            change_percent  = round(((current_holding - my_core_number) / my_core_number * 100), 4)
+            trade_amount    = round(abs(current_holding - my_core_number), round_off[0])
 
-            if (current_core > my_core_number) and (abs(change_percent) > margin_percentage):
+            if (current_holding > my_core_number) and (abs(change_percent) > margin_percentage):
                 if live_trade: client.order_market_sell(symbol=pair[i], quoteOrderQty=trade_amount)
                 print(colored(asset_info, "green"))
                 print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "green"))
                 print(colored("Prefix Core          : " + str(my_core_number) + " " + base[0], "green"))
-                print(colored("Current Core         : " + str(current_core) + " " + base[0], "green"))
+                print(colored("Current Core         : " + str(current_holding) + " " + base[0], "green"))
                 print(colored("Percentage Changed   : " + str(change_percent) + " %", "green"))
                 print(colored("Action               : SELL " + str(trade_amount) + " " + base[0] + "\n", "green"))
 
-            elif (current_core < my_core_number) and (abs(change_percent) > margin_percentage):
+            elif (current_holding < my_core_number) and (abs(change_percent) > margin_percentage):
                 if live_trade: client.order_market_buy(symbol=pair[i], quoteOrderQty=trade_amount)
                 print(colored(asset_info, "red"))
                 print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red"))
                 print(colored("Prefix Core          : " + str(my_core_number) + " " + base[0], "red"))
-                print(colored("Current Core         : " + str(current_core) + " " + base[0], "red"))
+                print(colored("Current Core         : " + str(current_holding) + " " + base[0], "red"))
                 print(colored("Percentage Changed   : " + str(change_percent) + " %", "red"))
                 print(colored("Action               : BUY " + str(trade_amount) + " " + base[0] + "\n", "red"))
 
@@ -68,7 +67,7 @@ try:
                 print(asset_info)
                 print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
                 print("Prefix Core          : " + str(my_core_number) + " " + base[0])
-                print("Current Core         : " + str(current_core) + " " + base[0])
+                print("Current Core         : " + str(current_holding) + " " + base[0])
                 print("Percentage Changed   : " + str(change_percent) + " %")
                 print("Action               : Do Nothing\n")
 
