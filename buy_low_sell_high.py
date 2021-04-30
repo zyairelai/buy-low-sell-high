@@ -1,9 +1,8 @@
 live_trade = True
 
 asset = ["ADA", "ANKR", "BNB", "CELR", "DOGE", "ETH", "FET", "MATIC", "NEO", "LINK", "LUNA", "POND", "SXP", "1INCH", "UNI", "VET", "XRP"]
-core  = [0.005]
-
-base  = ["BTC"] # affected variable : based[0] & round_off[0]
+core  = [0.005] # AFFECTED : core[0]
+base  = ["BTC"] # AFFECTED : based[0] & round_off[0]
 margin_percentage = 5
 
 pair,round_off = [], []
@@ -19,10 +18,7 @@ for coin in base:
     round_off.append(decimal)
 
 try:
-    import os
-    import socket
-    import requests
-    import urllib3
+    import os, socket, requests, urllib3
     from datetime import datetime
     from termcolor import colored
     from binance.client import Client
