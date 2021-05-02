@@ -3,7 +3,7 @@ live_trade = True
 asset = ["ADA", "ANKR", "BNB", "CELR", "DOGE", "ETH", "FET", "MATIC", "NEO", "LINK", "LUNA", "POND", "SXP", "1INCH", "UNI", "VET", "XRP"]
 core  = [0.005] # AFFECTED : core[0]
 base  = ["BTC"] # AFFECTED : based[0] & round_off[0]
-margin_percentage = 5
+margin_percentage = 4
 
 pair,round_off = [], []
 for i in range(len(asset)):
