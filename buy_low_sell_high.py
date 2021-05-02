@@ -1,7 +1,17 @@
 live_trade = True
 
-asset = ["BTC", "ETH", "BNB", "DOGE", "ADA", "ANKR", "CELR", "FET", "MATIC", "NEO", "LINK", "LUNA", "POND", "SXP", "1INCH", "UNI", "VET", "XRP"]
-core  = [300,300,300,300,250,250,250,250,250,250,250,250,250,250,250,250,250,250]
+asset = ["BTC"  , "ETH" , "BNB"  , "DOGE" ,
+         "ADA"  , "ANKR", "CELR" , "FET"  ,
+         "MATIC", "NEO" , "LINK" , "LUNA" ,
+         "OCEAN", "POND", "SXP"  , "1INCH",
+         "UNI"  , "VET" , "XRP"]
+
+core  = [300, 300, 300, 300,
+         250, 250, 250, 250,
+         250, 250, 250, 250,
+         250, 250, 250, 250,
+         250, 250, 250]
+
 base  = ["USDT"]
 
 # core  = [0.005] # AFFECTED : core[0]
@@ -72,8 +82,8 @@ try:
 
     try:
         scheduler = BlockingScheduler()
-        # if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', second='0')
-        if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
+        if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', second='0,10,20,30,40,50')
+        # if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
         else: scheduler.add_job(buy_low_sell_high, 'interval', seconds=10)
         scheduler.start()
 
