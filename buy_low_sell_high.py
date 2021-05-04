@@ -1,18 +1,8 @@
-live_trade = False
+live_trade = True
 
-asset = ["BTC"  , "ETH" , "BNB"  , "DOGE" ,
-         "ADA"  , "ANKR", "CELR" , "FET"  ,
-         "MATIC", "NEO" , "LINK" , "LUNA" ,
-         "OCEAN", "POND", "SXP"  , "1INCH",
-         "UNI"  , "VET" , "XRP"]
-
-core  = [300, 300, 300, 300,
-         250, 250, 250, 250,
-         250, 250, 250, 250,
-         250, 250, 250, 250,
-         250, 250, 250]
-
-base  = ["USDT"]
+asset = ["BTC", "ETH"]
+base  = ["USDT", "USDT"]
+core  = [300, 250]
 margin_percentage = 4
 
 pair,round_off = [], []
