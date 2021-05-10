@@ -3,6 +3,7 @@ live_trade = True
 asset = ["BTC", "ETH"]
 core  = [300, 250]
 
+# Optimal value, do not change these
 base  = ["USDT"]
 margin_percentage = 4
 
