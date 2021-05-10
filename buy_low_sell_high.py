@@ -1,8 +1,9 @@
 live_trade = True
 
 asset = ["BTC", "ETH"]
-base  = ["USDT", "USDT"]
 core  = [300, 250]
+
+base  = ["USDT"]
 margin_percentage = 4
 
 pair,round_off = [], []
