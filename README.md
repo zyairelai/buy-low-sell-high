@@ -17,7 +17,7 @@ export API_KEY="your_binance_api_key"
 export API_SECRET="your_binance_secret_key"
 ```
 
-Or as an alternative, you can change `line 14-16` in `run.py` to following: 
+Or as an alternative, you can change `line 33-35` in `run.py` to following: 
 ```
 api_key     = "your_binance_api_key"
 api_secret  = "your_binance_secret_key"
