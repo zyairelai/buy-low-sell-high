@@ -1,5 +1,5 @@
 # JOIN MY DISCORD HERE
-https://discord.gg/B5sUpfSw4m
+https://discord.gg/r4TnhcdqmT
 
 # BUY-LOW-SELL-HIGH
 Inspired by [The 3% Signal Strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
