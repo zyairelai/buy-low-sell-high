@@ -1,12 +1,12 @@
+# JOIN MY DISCORD HERE
+https://discord.gg/B5sUpfSw4m
+
 # BUY-LOW-SELL-HIGH
 Inspired by [The 3% Signal Strategy](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
 You can check my daily PnL [here](https://docs.google.com/spreadsheets/d/1VsOY7B7WWT0D67ifggpbsdHrQEegl0DaXHfWhsx--tY/edit#gid=103443936)
 
 # DISCLAIMER
-
 This automation software is purely handcoded by [@zyairelai](https://github.com/zyairelai) from scratch with my personal manual trading strategy.  
-Kindly provide feedback through my email `zyairelai@gmail.com` if you are using my repository.  
-If you had modified or improved my code feel free to share with me and we may have futher discussion on this project!  
 Distribution of the software is allowed. However, SELLING is NOT allowed.  
 PLEASE MANAGE YOUR RISK LEVEL BEFORE USING MY SCRIPT.
 
@@ -39,15 +39,7 @@ Let's make the magic happens!
 python3 run.py
 ```
 
-## 4. Donate for MORE!!
-If you found this useful to generate your passive income, feel free to donate to me so I can IMPROVE MORE!
-```
-BTC  (BTC)   : 15VowsyMp9A5DWbKbZEVt4A4r7dQQgddtn
-ETH  (ERC20) : 0x7701948f0477e629c5bb5d79f99b833133ab30d5
-USDT (ERC20) : 0x7701948f0477e629c5bb5d79f99b833133ab30d5
-```
-
-## 5. Screenshot Validation
+## 4. Screenshot Validation
 Here is my ROI with this strategy
 
 ### Screenshot PnL on 28th February 2021
