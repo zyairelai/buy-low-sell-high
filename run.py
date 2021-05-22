@@ -36,7 +36,7 @@ try:
 
     def buy_low_sell_high():
         for i in range(len(pair)):
-            
+
             # Auto Adjust FIXED or DYNAMIC variable
             if len(base) > 1 : my_base_asset = base[i]
             else: my_base_asset = base[0]

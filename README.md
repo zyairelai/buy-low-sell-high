@@ -34,11 +34,10 @@ pip3 install termcolor==1.1.0
 ```
 
 ## 3. Run
-Before you want to run, maybe you want to test how the output looks like:
-```
-python3 test.py
-```
-If you are all ready, let's make the magic happens!
+Before you want to run, maybe you want to test how the output looks like.
+Change the first line in `run.py` to `live_trade = False` 
+If you are all ready, set back `live_trade = True` and ...
+Let's make the magic happens!
 ```
 python3 run.py
 ```
