@@ -34,7 +34,11 @@ pip3 install termcolor==1.1.0
 ```
 
 ## 3. Run
-Let's make the magic happens!
+Before you want to run, maybe you want to test how the output looks like:
+```
+python3 test.py
+```
+If you are all ready, let's make the magic happens!
 ```
 python3 run.py
 ```

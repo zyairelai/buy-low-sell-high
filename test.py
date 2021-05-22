@@ -1,4 +1,4 @@
-live_trade = True
+live_trade = False
 
 asset = ["BTC", "ETH"]
 core  = [300, 250]
@@ -82,17 +82,7 @@ try:
                 print("Percentage Changed   : " + str(change_percent) + " %")
                 print("Action               : Do Nothing\n")
 
-    try:
-        print(colored("The program is running.", "green"))
-        print(colored("Make sure you joined the discord and read #BUY-LOW-SELL-HIGH", "green"))
-
-        scheduler = BlockingScheduler()
-        # if live_trade: scheduler.add_job(buy_low_sell_high, 'cron', second='0,10,20,30,40,50')
-        if live_trade:
-            scheduler.add_job(buy_low_sell_high, 'cron', hour='0,4,8,12,16,20')
-            scheduler.start()
-        else: buy_low_sell_high()
-
+    try: buy_low_sell_high()
     except (KeyError,
             socket.timeout,
             BinanceAPIException,
