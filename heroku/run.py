@@ -1,9 +1,8 @@
 live_trade = False
 
-asset = ["BTC", "ETH"]
-core  = [300, 250]
+asset = ["BTC"]
+core  = [500]
 
-# Optimal value, do not change these
 base  = ["USDT"]
 margin_percentage = 4
 
@@ -29,7 +28,6 @@ try:
     from binance.exceptions import BinanceAPIException
     from apscheduler.schedulers.blocking import BlockingScheduler
 
-    # Get environment variables
     api_key     = os.environ.get('API_KEY')
     api_secret  = os.environ.get('API_SECRET')
     client      = Client(api_key, api_secret)
