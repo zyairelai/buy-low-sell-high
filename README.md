@@ -17,6 +17,8 @@
 
 <a name="buy_low_sell_high"></a>
 ## BUY-LOW-SELL-HIGH
+A Binance Trading Bot that perfectly illustrate the art of "**buy low, sell high**" strategy.
+
 Inspired by [THE 3 % SIGNAL STRATEGY](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
 
 You can check my daily PnL [HERE ON MY GOOGLE SHEET](https://docs.google.com/spreadsheets/d/1VsOY7B7WWT0D67ifggpbsdHrQEegl0DaXHfWhsx--tY/edit#gid=103443936)  
@@ -31,7 +33,28 @@ USE IT AT YOUR OWN RISK!
 
 <a name="how_it_works"></a>
 ## HOW-IT-WORKS
-# WORK IN PROGRESS WORK IN PROGRESS 
+
+1. This script is a very simple implementation of "**buy low, sell high**" strategy.
+
+2. Assuming you want to hold 500 USDT worth of BTC.
+
+3. Make sure you have more than $500 in your `SPOT WALLET`.
+
+4. When you run the script, the program will purchase BTC using 500 USDT from your `SPOT WALLET`.
+
+5. If you use the default scheduler in the script, the script will execute every `00:00`, `06:00`, `12:00`, `18:00`.
+
+6. For every 6 hours, if your BTC amount, the $500 is increased more than the `margin_percentage`, which by default is 4%, it will trigger a sell order. 
+
+7. The sell amount will be the amount on top of the $500. Which bring the BTC balance back to $500. **(Sell into the pump)**
+
+8. Vice versa, if your BTC amount, the $500 is decresed more than the `margin_percentage`, which by default is 4%, it will trigger a buy order.
+
+9. The buy amount will be the amount to top up your BTC balance back to $500. **(Buy the dip)**
+
+10. Always make sure you have enough ammo quote asset to allow this script to buy low and sell high. 
+
+11. My recommendation for the holding to backup ammo ratio is 80:20, 80% for your token, 20% is the ammo quote asset.
 
 <a name="how_to_use"></a>
 ## HOW-TO-USE
@@ -129,5 +152,4 @@ Here is my ROI with this strategy
 </p>
 
 <a name="discord"></a>
-## JOIN MY DISCORD HERE
-- [QUICK ACCESS TO THE DARK DIMENSION](https://discord.gg/r4TnhcdqmT)
+## [JOIN MY DISCORD HERE](https://discord.gg/r4TnhcdqmT)
