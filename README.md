@@ -3,7 +3,6 @@
 1. [BUY-LOW-SELL-HIGH](#buy_low_sell_high)
 2. [DISCLAIMER](#hello_disclaimer)
 3. [HOW-IT-WORKS](#how_it_works)
-    - [](#)
 4. [HOW-TO-USE](#how_to_use)
     1. [ENVIRONMENT SETUP](#environment_setup)
     2. [PIP3 REQUIREMENTS](#pip3_requirements)
@@ -38,7 +37,7 @@ USE IT AT YOUR OWN RISK!
 
 2. Assuming you want to hold 500 USDT worth of BTC.
 
-3. Make sure you have more than $500 in your `SPOT WALLET`.
+3. Make sure you have more than 500 USDT in your `SPOT WALLET`, ideally at least 20-30% more than the amount you want to hold.
 
 4. When you run the script, the program will purchase BTC using 500 USDT from your `SPOT WALLET`.
 
@@ -46,21 +45,21 @@ USE IT AT YOUR OWN RISK!
 
 6. For every 6 hours, if your BTC amount, the $500 is increased more than the `margin_percentage`, which by default is 4%, it will trigger a sell order. 
 
-7. The sell amount will be the amount on top of the $500. Which bring the BTC balance back to $500. **(Sell into the pump)**
+7. The sell amount will be the amount on top of the value 500. Which will bring your BTC balance back to 500 USDT. **(Sell the profit into the pump)**
 
 8. Vice versa, if your BTC amount, the $500 is decresed more than the `margin_percentage`, which by default is 4%, it will trigger a buy order.
 
-9. The buy amount will be the amount to top up your BTC balance back to $500. **(Buy the dip)**
+9. The buy amount will be the amount to top up your BTC balance back to 500 USDT. **(Buy the dip with proper wallet management)**
 
-10. Always make sure you have enough ammo quote asset to allow this script to buy low and sell high. 
+10. Always make sure you have enough ammo quote asset to allow this script to buy low and sell high at its full potential. 
 
-11. My recommendation for the holding to backup ammo ratio is 80:20, 80% for your token, 20% is the ammo quote asset.
+11. My recommendation for the `token : backup ammo` ratio is 80:20, 80% for your overall token, 20% is the ammo quote asset.
 
 <a name="how_to_use"></a>
 ## HOW-TO-USE
 <a name="environment_setup"></a>
 ### 1. ENVIRONMENT SETUP
-Setup your environment key on the Terminal:
+Setup your environment API key on the Terminal:
 ```
 export API_KEY="your_binance_api_key"
 export API_SECRET="your_binance_secret_key"
@@ -152,4 +151,4 @@ Here is my ROI with this strategy
 </p>
 
 <a name="discord"></a>
-## [JOIN MY DISCORD HERE](https://discord.gg/r4TnhcdqmT)
+## [JOIN MY DISCORD - QUICK ACCESS TO THE DARK DIMENSION](https://discord.gg/r4TnhcdqmT)
