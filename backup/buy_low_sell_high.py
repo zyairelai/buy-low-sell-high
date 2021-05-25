@@ -1,24 +1,10 @@
-import os, socket, requests, urllib3, config
-from datetime import datetime
-from termcolor import colored
-from binance.client import Client
-from binance.exceptions import BinanceAPIException
-from apscheduler.schedulers.blocking import BlockingScheduler
+live_trade = False
 
-# Get environment variables
-api_key     = os.environ.get('API_KEY')
-api_secret  = os.environ.get('API_SECRET')
-client      = Client(api_key, api_secret)
+asset = ["BTC"]
+core  = [500]
+base  = ["USDT"]
+margin_percentage = 4
 
-# Value from config.py
-live_trade = config.live_trade
-asset = config.asset
-core  = config.core
-base  = config.base
-margin_percentage = config.margin_percentage
-Enable_Scheduler = config.Enable_Scheduler
-
-# Trading Setup
 pair,round_off = [], []
 for i in range(len(asset)):
     if len(base) > 1 : my_base_asset = base[i]
@@ -33,9 +19,19 @@ for coin in base:
     else: decimal == 4
     round_off.append(decimal)
 
+import os, socket, requests, urllib3
+from datetime import datetime
+from termcolor import colored
+from binance.client import Client
+from binance.exceptions import BinanceAPIException
+
+api_key     = os.environ.get('API_KEY')
+api_secret  = os.environ.get('API_SECRET')
+client      = Client(api_key, api_secret)
+
 def buy_low_sell_high():
     for i in range(len(pair)):
-
+        
         # Auto Adjust FIXED or DYNAMIC variable
         if len(base) > 1 : my_base_asset = base[i]
         else: my_base_asset = base[0]
@@ -81,14 +77,7 @@ def buy_low_sell_high():
             print("Percentage Changed   : " + str(change_percent) + " %")
             print("Action               : Do Nothing\n")
 
-try:
-    if live_trade and Enable_Scheduler:
-        print(colored("The program is running.\n", "green"))
-        scheduler = BlockingScheduler()
-        scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
-        scheduler.start()
-    else: buy_low_sell_high()
-
+try: buy_low_sell_high()
 except (KeyError,
         socket.timeout,
         BinanceAPIException,
@@ -102,5 +91,3 @@ except (KeyError,
     with open("Error_Message.txt", "a") as error_message:
         error_message.write("[!] Created at : " + datetime.today().strftime("%d-%m-%Y @ %H:%M:%S") + "\n")
         error_message.write(str(e) + "\n\n")
-
-except KeyboardInterrupt: print("\n\nAborted.\n")
