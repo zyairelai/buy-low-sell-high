@@ -16,7 +16,7 @@ asset = config.asset
 core  = config.core
 base  = config.base
 margin_percentage = config.margin_percentage
-Enable_Scheduler = config.Enable_Scheduler
+enable_scheduler = config.enable_scheduler
 
 # Trading Setup
 pair,round_off = [], []
@@ -82,7 +82,7 @@ def buy_low_sell_high():
             print("Action               : Do Nothing\n")
 
 try:
-    if live_trade and Enable_Scheduler:
+    if live_trade and enable_scheduler:
         print(colored("The program is running.\n", "green"))
         scheduler = BlockingScheduler()
         scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
