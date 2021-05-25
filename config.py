@@ -1,5 +1,5 @@
 live_trade = False
-Enable_Scheduler = False
+enable_scheduler = False
 
 # You can select the coins that you want to trade here
 asset = ["BTC", "ETH"]
