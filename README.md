@@ -16,7 +16,7 @@
 
 <a name="buy_low_sell_high"></a>
 ## BUY-LOW-SELL-HIGH
-This is a Binance Trading Bot that trades on SPOT WALLET
+This is a trading bot that trades on Binance SPOT WALLET
 
 A Trading Bot that perfectly illustrate the art of "**buy low, sell high**" strategy.
 
