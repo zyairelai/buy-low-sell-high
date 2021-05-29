@@ -35,6 +35,8 @@ USE IT AT YOUR OWN RISK!
 <a name="how_it_works"></a>
 ## HOW-IT-WORKS
 
+**NOTE** For example, for BTCUSDT, BTC is the base asset, USDT is the quote asset.
+
 1. This script is a very simple implementation of "**buy low, sell high**" strategy.
 
 2. Assuming you want to hold 500 USDT worth of BTC.
@@ -93,9 +95,9 @@ The settings can be configured in `config.py`.
 | --------------------| -----------------------------------------------------------------------------------------------------------|
 | `live_trade`        |`True` to place actual order <br /> `False` to see sample output                                            |
 | `enable_scheduler`  |`True` to run the code at every `00:00`, `06:00`, `12:00`, `18:00` <br /> `False` to run the code only once |
-| `asset`             | You can put your coin list here                                                                            |
-| `core`              | The amount of the quote asset. <br />  For `BTC/USDT`, the quote asset is `USDT`                           |
-| `quote`              | The Quote asset. The optimal is `USDT`                                                                     |
+| `base`              | You can put your coin list here                                                                            |
+| `core`              | Amount of the quote asset you want to maintain                                                             |
+| `quote`             | Optimal is `USDT`                                                                                          |
 | `margin_percentage` | The percentage that will trigger buy or sell. <br /> Optimal is 4 , minimum should not be lower than 3.5   |
 
 The following code means the program will help you to maintain:  
