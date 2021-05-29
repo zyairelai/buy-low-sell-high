@@ -95,7 +95,7 @@ The settings can be configured in `config.py`.
 | `enable_scheduler`  |`True` to run the code at every `00:00`, `06:00`, `12:00`, `18:00` <br /> `False` to run the code only once |
 | `asset`             | You can put your coin list here                                                                            |
 | `core`              | The amount of the quote asset. <br />  For `BTC/USDT`, the quote asset is `USDT`                           |
-| `base`              | The Quote asset. The optimal is `USDT`                                                                     |
+| `quote`              | The Quote asset. The optimal is `USDT`                                                                     |
 | `margin_percentage` | The percentage that will trigger buy or sell. <br /> Optimal is 4 , minimum should not be lower than 3.5   |
 
 The following code means the program will help you to maintain:  
@@ -104,7 +104,7 @@ The following code means the program will help you to maintain:
 ```
 asset = ["BTC", "ETH"]
 core  = [500, 300]
-base  = ["USDT]
+quote  = ["USDT]
 ```
 **IMPORTANT NOTE:**  
 - **The minimum core amount for quote USDT is 300 USDT**
