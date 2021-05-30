@@ -45,7 +45,7 @@ USE IT AT YOUR OWN RISK!
 
 4. When you run the script, the program will purchase BTC using 500 USDT from your `SPOT WALLET`.
 
-5. If you use the default scheduler in the script, the script will execute every `00:00`, `06:00`, `12:00`, `18:00`.
+5. If you use the default scheduler in the script, the script will execute every `00:00`, `06:00`, `12:00` and `18:00`.
 
 6. For every 6 hours, if your BTC amount, the $500 is increased more than the `margin_percentage`, which by default is 4%, it will trigger a sell order. 
 
@@ -57,7 +57,7 @@ USE IT AT YOUR OWN RISK!
 
 10. Always make sure you have enough ammo quote asset to allow this script to buy low and sell high at its full potential. 
 
-11. My recommendation for the `token : backup ammo` ratio is 80:20, 80% for your overall token, 20% is the ammo quote asset.
+11. My recommendation for the `token : backup ammo` ratio is `80 : 20`, 80% for your overall base assets, 20% is the ammo quote asset.
 
 <a name="how_to_use"></a>
 ## HOW-TO-USE
