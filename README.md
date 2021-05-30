@@ -57,7 +57,7 @@ USE IT AT YOUR OWN RISK!
 
 10. Always make sure you have enough ammo quote asset to allow this script to buy low and sell high at its full potential. 
 
-11. My recommendation for the `token : backup ammo` ratio is `80 : 20`, 80% for your overall base assets, 20% is the ammo quote asset.
+11. My recommendation for the `base : quote` ratio is `80 : 20`, 80% for your overall base assets, 20% is the ammo quote asset.
 
 <a name="how_to_use"></a>
 ## HOW-TO-USE
