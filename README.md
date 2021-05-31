@@ -154,7 +154,7 @@ Here is my ROI with this strategy
   <img src="screenshots/April 2021.png">
 </p>
 
-### Screenshot PnL on 30th April 2021
+### Screenshot PnL on 31st May 2021
 <p align="center">
   <img src="screenshots/May 2021.png">
 </p>
