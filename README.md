@@ -104,9 +104,9 @@ The following code means the program will help you to maintain:
 - 500 USDT worth of BTC
 - 300 USDT worth of ETH
 ```
-asset = ["BTC", "ETH"]
-core  = [500, 300]
-quote  = ["USDT]
+base = ["BTC", "ETH"]
+core = [500, 300]
+quote = ["USDT]
 ```
 **IMPORTANT NOTE:**  
 - **The minimum core amount for quote USDT is 300 USDT**
