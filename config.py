@@ -6,5 +6,5 @@ base = ["BTC", "BNB"]
 core = [500, 300]
 
 # Optimal value, do not change these
-quote  = ["USDT"]
+quote = ["USDT"]
 margin_percentage = 4
