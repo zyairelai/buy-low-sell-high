@@ -65,8 +65,8 @@ USE IT AT YOUR OWN RISK!
 ### 1. ENVIRONMENT SETUP
 Setup your environment API key on the Terminal:
 ```
-export API_KEY="your_binance_api_key"
-export API_SECRET="your_binance_secret_key"
+export BINANCE_KEY="your_binance_api_key"
+export BINANCE_SECRET="your_binance_secret_key"
 ```
 
 Or as an alternative, you can change `line 9-11` in `run.py` to following: 

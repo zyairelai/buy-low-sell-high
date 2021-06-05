@@ -25,8 +25,8 @@ from termcolor import colored
 from binance.client import Client
 from binance.exceptions import BinanceAPIException
 
-api_key     = os.environ.get('API_KEY')
-api_secret  = os.environ.get('API_SECRET')
+api_key     = os.environ.get('BINANCE_KEY')
+api_secret  = os.environ.get('BINANCE_SECRET')
 client      = Client(api_key, api_secret)
 
 def buy_low_sell_high():
