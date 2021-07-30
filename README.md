@@ -22,6 +22,8 @@ A Trading Bot that perfectly illustrate the art of "**buy low, sell high**" stra
 
 Inspired by [THE 3 % SIGNAL STRATEGY](https://medium.com/@Grandecoffee/how-to-never-lose-money-in-the-stock-market-again-2a1f48c86c45)  
 
+It is always a good idea if you know [how this strategy works](https://louiszhenyean.medium.com/buy-low-sell-high-a-practical-way-205661d30632) before you use this script.
+
 You can check my daily PnL [HERE ON MY GOOGLE SHEET](https://docs.google.com/spreadsheets/d/1VsOY7B7WWT0D67ifggpbsdHrQEegl0DaXHfWhsx--tY/edit#gid=103443936)  
 
 <a name="hello_disclaimer"></a>
