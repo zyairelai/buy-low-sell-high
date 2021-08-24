@@ -24,8 +24,6 @@ Inspired by [THE 3 % SIGNAL STRATEGY](https://medium.com/@Grandecoffee/how-to-ne
 
 It is always a good idea if you know [HOW THIS STRATEGY WORKS](https://louiszhenyean.medium.com/buy-low-sell-high-a-practical-way-205661d30632) before you use this script.
 
-You can check my daily PnL [HERE ON MY GOOGLE SHEET](https://docs.google.com/spreadsheets/d/1VsOY7B7WWT0D67ifggpbsdHrQEegl0DaXHfWhsx--tY/edit#gid=103443936)  
-
 <a name="hello_disclaimer"></a>
 ## DISCLAIMER
 I have no responsibility for any loss or hardship incurred directly or indirectly by using this code.
