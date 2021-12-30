@@ -13,6 +13,7 @@
     - [PROFIT-AND-LOSS](#profit_and_loss)
 6. [JOIN-MY-DISCORD](#discord)
     - [QUICK ACCESS TO THE DARK DIMENSION](https://discord.gg/6J2mXvYsFB)
+    - Please email or create an issue if the invitation link does not work  
 
 <a name="buy_low_sell_high"></a>
 ## BUY-LOW-SELL-HIGH
@@ -166,3 +167,4 @@ Here is my ROI with this strategy
 
 <a name="discord"></a>
 ## [JOIN MY DISCORD - QUICK ACCESS TO THE DARK DIMENSION](https://discord.gg/6J2mXvYsFB)
+### Please email or create an issue if the invitation link does not work  
