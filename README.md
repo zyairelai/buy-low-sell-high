@@ -26,10 +26,10 @@ Inspired by [THE 3 % SIGNAL STRATEGY](https://medium.com/@Grandecoffee/how-to-ne
 It is always a good idea if you know [HOW THIS STRATEGY WORKS](https://louiszhenyean.medium.com/buy-low-sell-high-a-practical-way-205661d30632) before you use this script.
 
 **This bot is stable therefore no new changes is made until new bugs been spotted.**  
-**I do use this bot personally and it works fine for me with stable profits.**  
+**I use this bot personally and it works fine for me with stable profits.**  
 **Maybe you might like to checkout my other bots that uses leverage:**  
-- https://github.com/zyairelai/long-term-low-leverage (I use this personally)
-- https://github.com/zyairelai/futures-hero/ (I do not use this personally)
+- https://github.com/zyairelai/futures-hero/ (I do not use this)
+- https://github.com/zyairelai/long-term-low-leverage (I am actively using this)
 
 <a name="hello_disclaimer"></a>
 ## DISCLAIMER
