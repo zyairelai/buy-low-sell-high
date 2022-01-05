@@ -28,8 +28,8 @@ It is always a good idea if you know [HOW THIS STRATEGY WORKS](https://louiszhen
 **This bot is stable therefore no new changes is made until new bugs been spotted.**  
 **I use this bot personally and it works fine for me with stable profits.**  
 **Maybe you might like to checkout my other bots that uses leverage:**  
-- https://github.com/zyairelai/futures-hero/ (I do not use this)
 - https://github.com/zyairelai/long-term-low-leverage (I am actively using this)
+- https://github.com/zyairelai/futures-hero/ (I do not use this personally)
 
 <a name="hello_disclaimer"></a>
 ## DISCLAIMER
