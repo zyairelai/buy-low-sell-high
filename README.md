@@ -1,3 +1,8 @@
+# ONLY WORKS FOR BINANCE
+If you are using KuCoin, there is a similar bot called "Infinity Grid" which introduced 6 months after I created this bot.  
+Me stress feeling stress feeling betrayed as my open source idea being taken without credits anyway, I prefer using KuCoin now because its easier and I don't have to host my ec2 instance to host this bot on the cloud 😂  
+Use my referral code for KuCoin https://www.kucoin.com/ucenter/signup?rcode=rJZ6M1C
+
 ## TABLE OF CONTENTS
 
 1. [BUY-LOW-SELL-HIGH](#buy_low_sell_high)
