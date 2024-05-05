@@ -1,4 +1,15 @@
-import os, socket, requests, urllib3, config
+live_trade = False
+enable_scheduler = False
+
+# You can select the coins that you want to trade here
+base = ["BTC", "ETH", "BCH", "LTC"]
+core = [500, 500, 400, 400]
+
+# Optimal value, do not change these
+quote = ["USDT"]
+margin_percentage = 4
+
+import os, socket, requests, urllib3
 from datetime import datetime
 from termcolor import colored
 from binance.client import Client
@@ -9,14 +20,6 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 api_key     = os.environ.get('BINANCE_KEY')
 api_secret  = os.environ.get('BINANCE_SECRET')
 client      = Client(api_key, api_secret)
-
-# Value from config.py
-live_trade = config.live_trade
-base = config.base
-core  = config.core
-quote  = config.quote
-margin_percentage = config.margin_percentage
-enable_scheduler = config.enable_scheduler
 
 # Trading Setup
 pair,round_off = [], []
