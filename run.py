@@ -5,7 +5,7 @@ enable_scheduler = True
 
 # You can select the coins that you want to trade here
 base = ["BTC", "ETH", "BCH", "LTC"]
-core = [800, 800, 500, 500]
+core = [500, 500, 300, 300]
 
 # Optimal value, do not change these
 quote = ["USDT"]
