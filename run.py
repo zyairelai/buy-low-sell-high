@@ -1,3 +1,5 @@
+#!/bin/python3
+
 live_trade = True
 enable_scheduler = True
 
@@ -17,9 +19,9 @@ from binance.exceptions import BinanceAPIException
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 # Get environment variables
-api_key     = os.environ.get('BINANCE_KEY')
-api_secret  = os.environ.get('BINANCE_SECRET')
-client      = Client(api_key, api_secret)
+api_key    = os.environ.get('BINANCE_KEY')
+api_secret = os.environ.get('BINANCE_SECRET')
+client     = Client(api_key, api_secret)
 
 # Trading Setup
 pair,round_off = [], []
