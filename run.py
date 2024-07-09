@@ -90,7 +90,8 @@ try:
     if live_trade and enable_scheduler:
         print(colored("The program is running.\n", "green"))
         scheduler = BlockingScheduler()
-        scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
+        # scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
+        scheduler.add_job(buy_low_sell_high, 'cron', minute='*')
         scheduler.start()
     else: buy_low_sell_high()
 
