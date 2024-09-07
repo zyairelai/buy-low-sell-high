@@ -5,7 +5,9 @@ enable_scheduler = True
 
 # You can select the coins that you want to trade here
 base = ["BTC", "ETH", "SOL", "DOGE", "PEPE"]
-core = [500, 500, 400, 300, 300]
+#core = [500, 500, 400, 300, 300]
+core = [800, 800, 500, 400, 400]
+#core = [1000, 1000, 800, 500, 500]
 
 # Optimal value, do not change these
 quote = ["USDT"]
@@ -90,8 +92,7 @@ try:
     if live_trade and enable_scheduler:
         print(colored("The program is running.\n", "green"))
         scheduler = BlockingScheduler()
-        # scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
-        scheduler.add_job(buy_low_sell_high, 'cron', minute='*')
+        scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
         scheduler.start()
     else: buy_low_sell_high()
 
