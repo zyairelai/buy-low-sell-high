@@ -11,7 +11,7 @@ core = [800, 800, 500, 400, 400]
 
 # Optimal value, do not change these
 quote = ["USDT"]
-margin_percentage = 4
+margin_percentage = 5
 
 import os, socket, requests, urllib3
 from datetime import datetime
@@ -92,7 +92,7 @@ try:
     if live_trade and enable_scheduler:
         print(colored("The program is running.\n", "green"))
         scheduler = BlockingScheduler()
-        scheduler.add_job(buy_low_sell_high, 'cron', hour='0,6,12,18')
+        scheduler.add_job(buy_low_sell_high, 'cron', hour=0, minute=0)
         scheduler.start()
     else: buy_low_sell_high()
 
