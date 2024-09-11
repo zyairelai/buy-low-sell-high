@@ -1,7 +1,7 @@
 #!/bin/python3
 
 live_trade = True
-enable_scheduler = True
+enable_scheduler = False
 
 # You can select the coins that you want to trade here
 base = ["BTC", "ETH", "SOL", "DOGE", "PEPE"]
