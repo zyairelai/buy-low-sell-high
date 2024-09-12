@@ -1,7 +1,6 @@
 #!/bin/python3
 
 live_trade = True
-enable_scheduler = False
 
 # You can select the coins that you want to trade here
 base = ["BTC", "ETH", "SOL", "DOGE", "PEPE"]
@@ -13,12 +12,10 @@ core = [800, 800, 500, 400, 400]
 quote = ["USDT"]
 margin_percentage = 5
 
-import os, socket, requests, urllib3
+import os
 from datetime import datetime
 from termcolor import colored
 from binance.client import Client
-from binance.exceptions import BinanceAPIException
-from apscheduler.schedulers.blocking import BlockingScheduler
 
 # Get environment variables
 api_key    = os.environ.get('BINANCE_KEY')
@@ -88,26 +85,4 @@ def buy_low_sell_high():
             print("Percentage Changed   : " + str(change_percent) + " %")
             print("Action               : Do Nothing\n")
 
-try:
-    if live_trade and enable_scheduler:
-        print(colored("The program is running.\n", "green"))
-        scheduler = BlockingScheduler()
-        scheduler.add_job(buy_low_sell_high, 'cron', hour=0, minute=0)
-        scheduler.start()
-    else: buy_low_sell_high()
-
-except (KeyError,
-        socket.timeout,
-        BinanceAPIException,
-        ConnectionResetError,
-        urllib3.exceptions.ProtocolError,
-        urllib3.exceptions.ReadTimeoutError,
-        requests.exceptions.ConnectionError,
-        requests.exceptions.ConnectTimeout,
-        requests.exceptions.ReadTimeout) as e:
-
-    with open("Error_Message.txt", "a") as error_message:
-        error_message.write("[!] Created at : " + datetime.today().strftime("%d-%m-%Y @ %H:%M:%S") + "\n")
-        error_message.write(str(e) + "\n\n")
-
-except KeyboardInterrupt: print("\n\nAborted.\n")
+buy_low_sell_high()
