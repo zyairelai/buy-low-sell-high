@@ -14,7 +14,6 @@ margin_percentage = 5
 
 import os
 from datetime import datetime
-from termcolor import colored
 from binance.client import Client
 
 # Get environment variables
@@ -61,21 +60,21 @@ def buy_low_sell_high():
         # Output Console and Placing Order
         if (current_holding > my_core_number) and (abs(change_percent) > margin_percentage):
             if live_trade: client.order_market_sell(symbol=pair[i], quoteOrderQty=trade_amount)
-            print(colored(asset_info, "green"))
-            print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "green"))
-            print(colored("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset, "green"))
-            print(colored("Current Core         : " + str(current_holding) + " " + my_quote_asset, "green"))
-            print(colored("Percentage Changed   : " + str(change_percent) + " %", "green"))
-            print(colored("Action               : SELL " + str(trade_amount) + " " + my_quote_asset + "\n", "green"))
+            print(asset_info, "green")
+            print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "green")
+            print("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset, "green")
+            print("Current Core         : " + str(current_holding) + " " + my_quote_asset, "green")
+            print("Percentage Changed   : " + str(change_percent) + " %", "green")
+            print("Action               : SELL " + str(trade_amount) + " " + my_quote_asset + "\n", "green")
 
         elif (current_holding < my_core_number) and (abs(change_percent) > margin_percentage):
             if live_trade: client.order_market_buy(symbol=pair[i], quoteOrderQty=trade_amount)
-            print(colored(asset_info, "red"))
-            print(colored("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red"))
-            print(colored("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset, "red"))
-            print(colored("Current Core         : " + str(current_holding) + " " + my_quote_asset, "red"))
-            print(colored("Percentage Changed   : " + str(change_percent) + " %", "red"))
-            print(colored("Action               : BUY " + str(trade_amount) + " " + my_quote_asset + "\n", "red"))
+            print(asset_info, "red")
+            print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red")
+            print("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset, "red")
+            print("Current Core         : " + str(current_holding) + " " + my_quote_asset, "red")
+            print("Percentage Changed   : " + str(change_percent) + " %", "red")
+            print("Action               : BUY " + str(trade_amount) + " " + my_quote_asset + "\n", "red")
 
         else:
             print(asset_info)
