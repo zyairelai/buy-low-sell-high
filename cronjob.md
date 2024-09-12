@@ -16,12 +16,7 @@ BINANCE_SECRET="API_KEY_HERE"
 0 0,12 * * * /usr/bin/python3 /home/kali/buy-low-sell-high/run.py
 ```
 
-### Add this line to run the job every minute and print the console output to log file
+### Run the job every minute and print the console output to a log file
 ```
 * * * * * /usr/bin/python3 /home/kali/buy-low-sell-high/run.py >> /home/kali/cronjob.log 2>&1
-```
-
-### Verify the crontab file
-```
-crontab -l
 ```
