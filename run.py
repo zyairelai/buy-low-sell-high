@@ -10,7 +10,7 @@ core = [800, 800, 400, 500, 500]
 
 # Optimal value, do not change these
 quote = ["USDT"]
-margin_percentage = 5
+margin_percentage = 4
 
 import os
 from datetime import datetime
@@ -60,21 +60,21 @@ def buy_low_sell_high():
         # Output Console and Placing Order
         if (current_holding > my_core_number) and (abs(change_percent) > margin_percentage):
             if live_trade: client.order_market_sell(symbol=pair[i], quoteOrderQty=trade_amount)
-            print(asset_info, "green")
-            print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "green")
-            print("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset, "green")
-            print("Current Core         : " + str(current_holding) + " " + my_quote_asset, "green")
-            print("Percentage Changed   : " + str(change_percent) + " %", "green")
-            print("Action               : SELL " + str(trade_amount) + " " + my_quote_asset + "\n", "green")
+            print(asset_info)
+            print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
+            print("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset)
+            print("Current Core         : " + str(current_holding) + " " + my_quote_asset)
+            print("Percentage Changed   : " + str(change_percent) + " %")
+            print("Action               : SELL " + str(trade_amount) + " " + my_quote_asset + "\n")
 
         elif (current_holding < my_core_number) and (abs(change_percent) > margin_percentage):
             if live_trade: client.order_market_buy(symbol=pair[i], quoteOrderQty=trade_amount)
-            print(asset_info, "red")
-            print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")), "red")
-            print("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset, "red")
-            print("Current Core         : " + str(current_holding) + " " + my_quote_asset, "red")
-            print("Percentage Changed   : " + str(change_percent) + " %", "red")
-            print("Action               : BUY " + str(trade_amount) + " " + my_quote_asset + "\n", "red")
+            print(asset_info)
+            print("Created at           : " + str(datetime.today().strftime("%d-%m-%Y @ %H:%M:%S")))
+            print("Prefix Core          : " + str(my_core_number) + " " + my_quote_asset)
+            print("Current Core         : " + str(current_holding) + " " + my_quote_asset)
+            print("Percentage Changed   : " + str(change_percent) + " %")
+            print("Action               : BUY " + str(trade_amount) + " " + my_quote_asset + "\n")
 
         else:
             print(asset_info)
