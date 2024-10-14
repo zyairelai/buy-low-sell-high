@@ -4,7 +4,7 @@ live_trade = True
 
 # You can select the coins that you want to trade here
 base = ["BTC", "ETH", "BNB", "SOL", "DOGE", "PEPE"]
-core = [500, 500, 400, 400, 300, 300]
+core = [550, 500, 450, 400, 350, 300]
 
 # Optimal value, do not change these
 quote = ["USDT"]
