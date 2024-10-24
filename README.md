@@ -16,9 +16,6 @@ Use my referral code for KuCoin https://www.kucoin.com/ucenter/signup?rcode=rJZ6
 5. [SCREENSHOTS](#hello_screenshots)
     - [SAMPLE-OUTPUT](#sample_output)
     - [PROFIT-AND-LOSS](#profit_and_loss)
-6. [JOIN-MY-DISCORD](#discord)
-    - [QUICK ACCESS TO THE DARK DIMENSION](https://discord.gg/6J2mXvYsFB)
-    - Please email or create an issue if the invitation link does not work  
 
 <a name="buy_low_sell_high"></a>
 ## BUY-LOW-SELL-HIGH
@@ -175,7 +172,3 @@ Here is my ROI with this strategy
 <p align="center">
   <img src="screenshots/June 2021.png">
 </p>
-
-<a name="discord"></a>
-## [JOIN MY DISCORD - QUICK ACCESS TO THE DARK DIMENSION](https://discord.gg/6J2mXvYsFB)
-### Please email or create an issue if the invitation link does not work  
