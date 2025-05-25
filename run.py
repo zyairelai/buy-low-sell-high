@@ -3,12 +3,12 @@
 live_trade = True
 
 # You can select the coins that you want to trade here
-base = ["ETH", "BNB", "SOL", "DOGE"]
-core = [0.005, 0.005, 0.005, 0.005]
+base = ["BTC", "ETH", "BNB", "SOL", "DOGE"]
+core = [1000, 1000, 800, 500, 500]
 
 # Optimal value, do not change these
-quote = ["BTC"]
-margin_percentage = 3
+quote = ["USDT"]
+margin_percentage = 5
 
 import os
 from datetime import datetime
